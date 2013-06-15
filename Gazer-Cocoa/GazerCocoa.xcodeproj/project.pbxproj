@@ -1,0 +1,1163 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7204E6751489649400D482B9 /* GlobalManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7204E6741489649400D482B9 /* GlobalManager.mm */; };
+		7212EA43147C50C700CB2A8D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7212EA42147C50C700CB2A8D /* Cocoa.framework */; };
+		7212EA4D147C50C700CB2A8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7212EA4B147C50C700CB2A8D /* InfoPlist.strings */; };
+		7212EA4F147C50C700CB2A8D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EA4E147C50C700CB2A8D /* main.mm */; };
+		7212EA53147C50C700CB2A8D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7212EA51147C50C700CB2A8D /* Credits.rtf */; };
+		7212EA56147C50C700CB2A8D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EA55147C50C700CB2A8D /* AppDelegate.mm */; };
+		7212EA59147C50C700CB2A8D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7212EA57147C50C700CB2A8D /* MainMenu.xib */; };
+		7212EBB9147C5BD100CB2A8D /* BlinkDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA3147C5BD100CB2A8D /* BlinkDetector.mm */; };
+		7212EBBA147C5BD100CB2A8D /* Calibrator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA4147C5BD100CB2A8D /* Calibrator.mm */; };
+		7212EBBB147C5BD100CB2A8D /* Containers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA5147C5BD100CB2A8D /* Containers.mm */; };
+		7212EBBC147C5BD100CB2A8D /* EyeExtractor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA6147C5BD100CB2A8D /* EyeExtractor.mm */; };
+		7212EBBD147C5BD100CB2A8D /* FaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA7147C5BD100CB2A8D /* FaceDetector.mm */; };
+		7212EBBE147C5BD100CB2A8D /* FeatureDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA8147C5BD100CB2A8D /* FeatureDetector.mm */; };
+		7212EBBF147C5BD100CB2A8D /* FMatrixAffineCompute.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBA9147C5BD100CB2A8D /* FMatrixAffineCompute.mm */; };
+		7212EBC0147C5BD100CB2A8D /* GaussianProcess.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBAA147C5BD100CB2A8D /* GaussianProcess.mm */; };
+		7212EBC2147C5BD100CB2A8D /* GazeTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBAC147C5BD100CB2A8D /* GazeTracker.mm */; };
+		7212EBC3147C5BD100CB2A8D /* GraphicalPointer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBAD147C5BD100CB2A8D /* GraphicalPointer.mm */; };
+		7212EBC4147C5BD100CB2A8D /* HeadCompensation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBAE147C5BD100CB2A8D /* HeadCompensation.mm */; };
+		7212EBC5147C5BD100CB2A8D /* HeadTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBAF147C5BD100CB2A8D /* HeadTracker.mm */; };
+		7212EBC6147C5BD100CB2A8D /* LeastSquares.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB0147C5BD100CB2A8D /* LeastSquares.mm */; };
+		7212EBC7147C5BD100CB2A8D /* MainGazeTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB1147C5BD100CB2A8D /* MainGazeTracker.mm */; };
+		7212EBC8147C5BD100CB2A8D /* opengazerHighGui.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB2147C5BD100CB2A8D /* opengazerHighGui.mm */; };
+		7212EBC9147C5BD100CB2A8D /* OutputMethods.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB3147C5BD100CB2A8D /* OutputMethods.mm */; };
+		7212EBCB147C5BD100CB2A8D /* PointTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB5147C5BD100CB2A8D /* PointTracker.mm */; };
+		7212EBCC147C5BD100CB2A8D /* TrackingSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB6147C5BD100CB2A8D /* TrackingSystem.mm */; };
+		7212EBCD147C5BD100CB2A8D /* utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB7147C5BD100CB2A8D /* utils.mm */; };
+		7212EBCE147C5BD100CB2A8D /* WindowStore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7212EBB8147C5BD100CB2A8D /* WindowStore.mm */; };
+		722F1C971485A38800276526 /* libopencv_highgui.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72AF309D1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib */; };
+		722F1C981485A38800276526 /* libopencv_highgui.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72AF309E1485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib */; };
+		722F1CA31485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 722F1CA11485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		722F1CA41485DBE700276526 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 722F1CA21485DBE700276526 /* haarcascade_frontalface_alt.xml */; };
+		722F1CA71485E1AD00276526 /* haarcascade_eye_tree_eyeglasses.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 722F1CA11485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		722F1CA81485E1AD00276526 /* haarcascade_frontalface_alt.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 722F1CA21485DBE700276526 /* haarcascade_frontalface_alt.xml */; };
+		722F1CBC1486B19300276526 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722F1CB91486B17700276526 /* QTKit.framework */; };
+		722F1CC21486B8D100276526 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722F1CC11486B8D100276526 /* QuartzCore.framework */; };
+		723712481480343300CF491E /* ogPoint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 723712461480342D00CF491E /* ogPoint.mm */; };
+		7285AED314821EA60062CA2B /* calpoints.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7285AED214821EA60062CA2B /* calpoints.txt */; };
+		729A59B0148800D9006155E1 /* calibrationTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = 729A59AF148800D9006155E1 /* calibrationTarget.png */; };
+		729A59B314880FF3006155E1 /* GazerCocoaBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 729A59B214880FF3006155E1 /* GazerCocoaBridge.mm */; };
+		72A6122D14858C9E000FF917 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F214858C9E000FF917 /* libavcodec.dylib */; };
+		72A6122E14858C9E000FF917 /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F314858C9E000FF917 /* libavformat.dylib */; };
+		72A6122F14858C9E000FF917 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F414858C9E000FF917 /* libavutil.dylib */; };
+		72A6123014858C9E000FF917 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F514858C9E000FF917 /* libbz2.1.0.dylib */; };
+		72A6123114858C9E000FF917 /* libdirac_decoder.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F614858C9E000FF917 /* libdirac_decoder.0.dylib */; };
+		72A6123214858C9E000FF917 /* libdirac_encoder.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F714858C9E000FF917 /* libdirac_encoder.0.dylib */; };
+		72A6123314858C9E000FF917 /* libjasper.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F814858C9E000FF917 /* libjasper.1.dylib */; };
+		72A6123414858C9E000FF917 /* libjbig.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611F914858C9E000FF917 /* libjbig.2.dylib */; };
+		72A6123514858C9E000FF917 /* libjpeg.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FA14858C9E000FF917 /* libjpeg.8.dylib */; };
+		72A6123614858C9E000FF917 /* liblcms2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FB14858C9E000FF917 /* liblcms2.2.dylib */; };
+		72A6123714858C9E000FF917 /* libmp3lame.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FC14858C9E000FF917 /* libmp3lame.0.dylib */; };
+		72A6123814858C9E000FF917 /* libnetlib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FD14858C9E000FF917 /* libnetlib.dylib */; };
+		72A6123914858C9E000FF917 /* libogg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FE14858C9E000FF917 /* libogg.0.dylib */; };
+		72A6123A14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A611FF14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib */; };
+		72A6123B14858C9E000FF917 /* libopencv_calib3d.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120014858C9E000FF917 /* libopencv_calib3d.2.3.dylib */; };
+		72A6123C14858C9E000FF917 /* libopencv_contrib.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120114858C9E000FF917 /* libopencv_contrib.2.3.1.dylib */; };
+		72A6123D14858C9E000FF917 /* libopencv_core.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120214858C9E000FF917 /* libopencv_core.2.3.1.dylib */; };
+		72A6123E14858C9E000FF917 /* libopencv_core.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120314858C9E000FF917 /* libopencv_core.2.3.dylib */; };
+		72A6123F14858C9E000FF917 /* libopencv_features2d.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120414858C9E000FF917 /* libopencv_features2d.2.3.1.dylib */; };
+		72A6124014858C9E000FF917 /* libopencv_features2d.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120514858C9E000FF917 /* libopencv_features2d.2.3.dylib */; };
+		72A6124114858C9E000FF917 /* libopencv_flann.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120614858C9E000FF917 /* libopencv_flann.2.3.1.dylib */; };
+		72A6124214858C9E000FF917 /* libopencv_flann.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120714858C9E000FF917 /* libopencv_flann.2.3.dylib */; };
+		72A6124314858C9E000FF917 /* libopencv_gpu.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120814858C9E000FF917 /* libopencv_gpu.2.3.1.dylib */; };
+		72A6124614858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120B14858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib */; };
+		72A6124714858C9E000FF917 /* libopencv_imgproc.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120C14858C9E000FF917 /* libopencv_imgproc.2.3.dylib */; };
+		72A6124814858C9E000FF917 /* libopencv_legacy.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120D14858C9E000FF917 /* libopencv_legacy.2.3.1.dylib */; };
+		72A6124914858C9E000FF917 /* libopencv_ml.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120E14858C9E000FF917 /* libopencv_ml.2.3.1.dylib */; };
+		72A6124A14858C9E000FF917 /* libopencv_ml.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6120F14858C9E000FF917 /* libopencv_ml.2.3.dylib */; };
+		72A6124B14858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121014858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib */; };
+		72A6124C14858C9E000FF917 /* libopencv_objdetect.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121114858C9E000FF917 /* libopencv_objdetect.2.3.dylib */; };
+		72A6124D14858C9E000FF917 /* libopencv_ts.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121214858C9E000FF917 /* libopencv_ts.2.3.1.dylib */; };
+		72A6124E14858C9E000FF917 /* libopencv_video.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121314858C9E000FF917 /* libopencv_video.2.3.1.dylib */; };
+		72A6124F14858C9E000FF917 /* libopencv_video.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121414858C9E000FF917 /* libopencv_video.2.3.dylib */; };
+		72A6125014858C9E000FF917 /* libopenjpeg.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121514858C9E000FF917 /* libopenjpeg.1.dylib */; };
+		72A6125114858C9E000FF917 /* liborc-0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121614858C9E000FF917 /* liborc-0.4.0.dylib */; };
+		72A6125214858C9E000FF917 /* libpng14.14.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121714858C9E000FF917 /* libpng14.14.dylib */; };
+		72A6125614858C9E000FF917 /* libschroedinger-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121B14858C9E000FF917 /* libschroedinger-1.0.0.dylib */; };
+		72A6125714858C9E000FF917 /* libSDL-1.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121C14858C9E000FF917 /* libSDL-1.2.0.dylib */; };
+		72A6125814858C9E000FF917 /* libspeex.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121D14858C9E000FF917 /* libspeex.1.dylib */; };
+		72A6125914858C9E000FF917 /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121E14858C9E000FF917 /* libswscale.dylib */; };
+		72A6125A14858C9E000FF917 /* libtheoradec.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6121F14858C9E000FF917 /* libtheoradec.1.dylib */; };
+		72A6125B14858C9E000FF917 /* libtheoraenc.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122014858C9E000FF917 /* libtheoraenc.1.dylib */; };
+		72A6125C14858C9E000FF917 /* libtiff.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122114858C9E000FF917 /* libtiff.3.dylib */; };
+		72A6125D14858C9E000FF917 /* libv3p_netlib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122214858C9E000FF917 /* libv3p_netlib.dylib */; };
+		72A6125E14858C9E000FF917 /* libvcl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122314858C9E000FF917 /* libvcl.dylib */; };
+		72A6125F14858C9E000FF917 /* libvnl_algo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122414858C9E000FF917 /* libvnl_algo.dylib */; };
+		72A6126014858C9E000FF917 /* libvnl_io.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122514858C9E000FF917 /* libvnl_io.dylib */; };
+		72A6126114858C9E000FF917 /* libvnl_xio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122614858C9E000FF917 /* libvnl_xio.dylib */; };
+		72A6126214858C9E000FF917 /* libvnl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122714858C9E000FF917 /* libvnl.dylib */; };
+		72A6126314858C9E000FF917 /* libvorbis.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122814858C9E000FF917 /* libvorbis.0.dylib */; };
+		72A6126414858C9E000FF917 /* libvorbisenc.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122914858C9E000FF917 /* libvorbisenc.2.dylib */; };
+		72A6126514858C9E000FF917 /* libvsl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122A14858C9E000FF917 /* libvsl.dylib */; };
+		72A6126614858C9E000FF917 /* libx264.118.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122B14858C9E000FF917 /* libx264.118.dylib */; };
+		72A6126714858C9E000FF917 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6122C14858C9E000FF917 /* libz.1.dylib */; };
+		72A6126814858CA9000FF917 /* libavcodec.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F214858C9E000FF917 /* libavcodec.dylib */; };
+		72A6126914858CA9000FF917 /* libavformat.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F314858C9E000FF917 /* libavformat.dylib */; };
+		72A6126A14858CA9000FF917 /* libavutil.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F414858C9E000FF917 /* libavutil.dylib */; };
+		72A6126B14858CA9000FF917 /* libbz2.1.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F514858C9E000FF917 /* libbz2.1.0.dylib */; };
+		72A6126C14858CA9000FF917 /* libdirac_decoder.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F614858C9E000FF917 /* libdirac_decoder.0.dylib */; };
+		72A6126D14858CA9000FF917 /* libdirac_encoder.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F714858C9E000FF917 /* libdirac_encoder.0.dylib */; };
+		72A6126E14858CA9000FF917 /* libjasper.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F814858C9E000FF917 /* libjasper.1.dylib */; };
+		72A6126F14858CA9000FF917 /* libjbig.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611F914858C9E000FF917 /* libjbig.2.dylib */; };
+		72A6127014858CA9000FF917 /* libjpeg.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FA14858C9E000FF917 /* libjpeg.8.dylib */; };
+		72A6127114858CA9000FF917 /* liblcms2.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FB14858C9E000FF917 /* liblcms2.2.dylib */; };
+		72A6127214858CA9000FF917 /* libmp3lame.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FC14858C9E000FF917 /* libmp3lame.0.dylib */; };
+		72A6127314858CA9000FF917 /* libnetlib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FD14858C9E000FF917 /* libnetlib.dylib */; };
+		72A6127414858CA9000FF917 /* libogg.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FE14858C9E000FF917 /* libogg.0.dylib */; };
+		72A6127514858CA9000FF917 /* libopencv_calib3d.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A611FF14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib */; };
+		72A6127614858CA9000FF917 /* libopencv_calib3d.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120014858C9E000FF917 /* libopencv_calib3d.2.3.dylib */; };
+		72A6127714858CA9000FF917 /* libopencv_contrib.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120114858C9E000FF917 /* libopencv_contrib.2.3.1.dylib */; };
+		72A6127814858CA9000FF917 /* libopencv_core.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120214858C9E000FF917 /* libopencv_core.2.3.1.dylib */; };
+		72A6127914858CA9000FF917 /* libopencv_core.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120314858C9E000FF917 /* libopencv_core.2.3.dylib */; };
+		72A6127A14858CA9000FF917 /* libopencv_features2d.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120414858C9E000FF917 /* libopencv_features2d.2.3.1.dylib */; };
+		72A6127B14858CA9000FF917 /* libopencv_features2d.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120514858C9E000FF917 /* libopencv_features2d.2.3.dylib */; };
+		72A6127C14858CA9000FF917 /* libopencv_flann.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120614858C9E000FF917 /* libopencv_flann.2.3.1.dylib */; };
+		72A6127D14858CA9000FF917 /* libopencv_flann.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120714858C9E000FF917 /* libopencv_flann.2.3.dylib */; };
+		72A6127E14858CA9000FF917 /* libopencv_gpu.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120814858C9E000FF917 /* libopencv_gpu.2.3.1.dylib */; };
+		72A6128114858CA9000FF917 /* libopencv_imgproc.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120B14858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib */; };
+		72A6128214858CA9000FF917 /* libopencv_imgproc.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120C14858C9E000FF917 /* libopencv_imgproc.2.3.dylib */; };
+		72A6128314858CA9000FF917 /* libopencv_legacy.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120D14858C9E000FF917 /* libopencv_legacy.2.3.1.dylib */; };
+		72A6128414858CA9000FF917 /* libopencv_ml.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120E14858C9E000FF917 /* libopencv_ml.2.3.1.dylib */; };
+		72A6128514858CA9000FF917 /* libopencv_ml.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6120F14858C9E000FF917 /* libopencv_ml.2.3.dylib */; };
+		72A6128614858CA9000FF917 /* libopencv_objdetect.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121014858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib */; };
+		72A6128714858CA9000FF917 /* libopencv_objdetect.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121114858C9E000FF917 /* libopencv_objdetect.2.3.dylib */; };
+		72A6128814858CA9000FF917 /* libopencv_ts.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121214858C9E000FF917 /* libopencv_ts.2.3.1.dylib */; };
+		72A6128914858CA9000FF917 /* libopencv_video.2.3.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121314858C9E000FF917 /* libopencv_video.2.3.1.dylib */; };
+		72A6128A14858CA9000FF917 /* libopencv_video.2.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121414858C9E000FF917 /* libopencv_video.2.3.dylib */; };
+		72A6128B14858CA9000FF917 /* libopenjpeg.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121514858C9E000FF917 /* libopenjpeg.1.dylib */; };
+		72A6128C14858CA9000FF917 /* liborc-0.4.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121614858C9E000FF917 /* liborc-0.4.0.dylib */; };
+		72A6128D14858CA9000FF917 /* libpng14.14.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121714858C9E000FF917 /* libpng14.14.dylib */; };
+		72A6129114858CA9000FF917 /* libschroedinger-1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121B14858C9E000FF917 /* libschroedinger-1.0.0.dylib */; };
+		72A6129214858CA9000FF917 /* libSDL-1.2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121C14858C9E000FF917 /* libSDL-1.2.0.dylib */; };
+		72A6129314858CA9000FF917 /* libspeex.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121D14858C9E000FF917 /* libspeex.1.dylib */; };
+		72A6129414858CA9000FF917 /* libswscale.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121E14858C9E000FF917 /* libswscale.dylib */; };
+		72A6129514858CA9000FF917 /* libtheoradec.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6121F14858C9E000FF917 /* libtheoradec.1.dylib */; };
+		72A6129614858CA9000FF917 /* libtheoraenc.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122014858C9E000FF917 /* libtheoraenc.1.dylib */; };
+		72A6129714858CA9000FF917 /* libtiff.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122114858C9E000FF917 /* libtiff.3.dylib */; };
+		72A6129814858CA9000FF917 /* libv3p_netlib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122214858C9E000FF917 /* libv3p_netlib.dylib */; };
+		72A6129914858CA9000FF917 /* libvcl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122314858C9E000FF917 /* libvcl.dylib */; };
+		72A6129A14858CA9000FF917 /* libvnl_algo.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122414858C9E000FF917 /* libvnl_algo.dylib */; };
+		72A6129B14858CA9000FF917 /* libvnl_io.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122514858C9E000FF917 /* libvnl_io.dylib */; };
+		72A6129C14858CA9000FF917 /* libvnl_xio.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122614858C9E000FF917 /* libvnl_xio.dylib */; };
+		72A6129D14858CA9000FF917 /* libvnl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122714858C9E000FF917 /* libvnl.dylib */; };
+		72A6129E14858CA9000FF917 /* libvorbis.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122814858C9E000FF917 /* libvorbis.0.dylib */; };
+		72A6129F14858CA9000FF917 /* libvorbisenc.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122914858C9E000FF917 /* libvorbisenc.2.dylib */; };
+		72A612A014858CA9000FF917 /* libvsl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122A14858C9E000FF917 /* libvsl.dylib */; };
+		72A612A114858CA9000FF917 /* libx264.118.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122B14858C9E000FF917 /* libx264.118.dylib */; };
+		72A612A214858CA9000FF917 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A6122C14858C9E000FF917 /* libz.1.dylib */; };
+		72AF309F1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AF309D1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib */; };
+		72AF30A01485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AF309E1485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib */; };
+		AE1D9F27148F35D9009FB298 /* gazeTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D9F26148F35D9009FB298 /* gazeTarget.png */; };
+		AE1D9F2A149002EE009FB298 /* LCGazeTrackerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1D9F29149002EE009FB298 /* LCGazeTrackerWindowController.m */; };
+		AE1D9F2C14901374009FB298 /* GazeTrackerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1D9F2B14901373009FB298 /* GazeTrackerWindow.xib */; };
+		AE301A03149698AB00BBA5FF /* LCCalibrationFaceTrackingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE301A02149698AB00BBA5FF /* LCCalibrationFaceTrackingView.m */; };
+		AE301A091496A2C900BBA5FF /* CaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE301A081496A2C800BBA5FF /* CaptureView.m */; };
+		AE55644114927BEF0036008D /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE55644014927BEF0036008D /* DDHotKeyCenter.m */; };
+		AE556443149280950036008D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE556442149280950036008D /* Carbon.framework */; };
+		AE815AAA14863FA6009E362E /* LCCalibrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE815A9A14863FA6009E362E /* LCCalibrationView.m */; };
+		AE815AAB14863FA6009E362E /* LCCalibrationWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE815A9C14863FA6009E362E /* LCCalibrationWindowController.mm */; };
+		AE815AAC14863FA6009E362E /* LCCalibrationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE815A9E14863FA6009E362E /* LCCalibrationLayer.m */; };
+		AE815AAD14863FA6009E362E /* LCDummyGazeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AE815AA014863FA6009E362E /* LCDummyGazeTracker.m */; };
+		AE815AAE14863FA6009E362E /* LCGazePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE815AA214863FA6009E362E /* LCGazePoint.m */; };
+		AE815AAF14863FA6009E362E /* LCCalibrationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE815AA414863FA6009E362E /* LCCalibrationPoint.m */; };
+		AE815AB114863FCF009E362E /* CalibrationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE815AB014863FCF009E362E /* CalibrationWindow.xib */; };
+		AEEAA609148C44E20049271E /* LCCalibrationCameraView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEEAA608148C44E20049271E /* LCCalibrationCameraView.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		722F1CA61485E1A000276526 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				722F1CA71485E1AD00276526 /* haarcascade_eye_tree_eyeglasses.xml in CopyFiles */,
+				722F1CA81485E1AD00276526 /* haarcascade_frontalface_alt.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A611D414858604000FF917 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				722F1C971485A38800276526 /* libopencv_highgui.2.3.1.dylib in CopyFiles */,
+				722F1C981485A38800276526 /* libopencv_highgui.2.3.dylib in CopyFiles */,
+				72A6126814858CA9000FF917 /* libavcodec.dylib in CopyFiles */,
+				72A6126914858CA9000FF917 /* libavformat.dylib in CopyFiles */,
+				72A6126A14858CA9000FF917 /* libavutil.dylib in CopyFiles */,
+				72A6126B14858CA9000FF917 /* libbz2.1.0.dylib in CopyFiles */,
+				72A6126C14858CA9000FF917 /* libdirac_decoder.0.dylib in CopyFiles */,
+				72A6126D14858CA9000FF917 /* libdirac_encoder.0.dylib in CopyFiles */,
+				72A6126E14858CA9000FF917 /* libjasper.1.dylib in CopyFiles */,
+				72A6126F14858CA9000FF917 /* libjbig.2.dylib in CopyFiles */,
+				72A6127014858CA9000FF917 /* libjpeg.8.dylib in CopyFiles */,
+				72A6127114858CA9000FF917 /* liblcms2.2.dylib in CopyFiles */,
+				72A6127214858CA9000FF917 /* libmp3lame.0.dylib in CopyFiles */,
+				72A6127314858CA9000FF917 /* libnetlib.dylib in CopyFiles */,
+				72A6127414858CA9000FF917 /* libogg.0.dylib in CopyFiles */,
+				72A6127514858CA9000FF917 /* libopencv_calib3d.2.3.1.dylib in CopyFiles */,
+				72A6127614858CA9000FF917 /* libopencv_calib3d.2.3.dylib in CopyFiles */,
+				72A6127714858CA9000FF917 /* libopencv_contrib.2.3.1.dylib in CopyFiles */,
+				72A6127814858CA9000FF917 /* libopencv_core.2.3.1.dylib in CopyFiles */,
+				72A6127914858CA9000FF917 /* libopencv_core.2.3.dylib in CopyFiles */,
+				72A6127A14858CA9000FF917 /* libopencv_features2d.2.3.1.dylib in CopyFiles */,
+				72A6127B14858CA9000FF917 /* libopencv_features2d.2.3.dylib in CopyFiles */,
+				72A6127C14858CA9000FF917 /* libopencv_flann.2.3.1.dylib in CopyFiles */,
+				72A6127D14858CA9000FF917 /* libopencv_flann.2.3.dylib in CopyFiles */,
+				72A6127E14858CA9000FF917 /* libopencv_gpu.2.3.1.dylib in CopyFiles */,
+				72A6128114858CA9000FF917 /* libopencv_imgproc.2.3.1.dylib in CopyFiles */,
+				72A6128214858CA9000FF917 /* libopencv_imgproc.2.3.dylib in CopyFiles */,
+				72A6128314858CA9000FF917 /* libopencv_legacy.2.3.1.dylib in CopyFiles */,
+				72A6128414858CA9000FF917 /* libopencv_ml.2.3.1.dylib in CopyFiles */,
+				72A6128514858CA9000FF917 /* libopencv_ml.2.3.dylib in CopyFiles */,
+				72A6128614858CA9000FF917 /* libopencv_objdetect.2.3.1.dylib in CopyFiles */,
+				72A6128714858CA9000FF917 /* libopencv_objdetect.2.3.dylib in CopyFiles */,
+				72A6128814858CA9000FF917 /* libopencv_ts.2.3.1.dylib in CopyFiles */,
+				72A6128914858CA9000FF917 /* libopencv_video.2.3.1.dylib in CopyFiles */,
+				72A6128A14858CA9000FF917 /* libopencv_video.2.3.dylib in CopyFiles */,
+				72A6128B14858CA9000FF917 /* libopenjpeg.1.dylib in CopyFiles */,
+				72A6128C14858CA9000FF917 /* liborc-0.4.0.dylib in CopyFiles */,
+				72A6128D14858CA9000FF917 /* libpng14.14.dylib in CopyFiles */,
+				72A6129114858CA9000FF917 /* libschroedinger-1.0.0.dylib in CopyFiles */,
+				72A6129214858CA9000FF917 /* libSDL-1.2.0.dylib in CopyFiles */,
+				72A6129314858CA9000FF917 /* libspeex.1.dylib in CopyFiles */,
+				72A6129414858CA9000FF917 /* libswscale.dylib in CopyFiles */,
+				72A6129514858CA9000FF917 /* libtheoradec.1.dylib in CopyFiles */,
+				72A6129614858CA9000FF917 /* libtheoraenc.1.dylib in CopyFiles */,
+				72A6129714858CA9000FF917 /* libtiff.3.dylib in CopyFiles */,
+				72A6129814858CA9000FF917 /* libv3p_netlib.dylib in CopyFiles */,
+				72A6129914858CA9000FF917 /* libvcl.dylib in CopyFiles */,
+				72A6129A14858CA9000FF917 /* libvnl_algo.dylib in CopyFiles */,
+				72A6129B14858CA9000FF917 /* libvnl_io.dylib in CopyFiles */,
+				72A6129C14858CA9000FF917 /* libvnl_xio.dylib in CopyFiles */,
+				72A6129D14858CA9000FF917 /* libvnl.dylib in CopyFiles */,
+				72A6129E14858CA9000FF917 /* libvorbis.0.dylib in CopyFiles */,
+				72A6129F14858CA9000FF917 /* libvorbisenc.2.dylib in CopyFiles */,
+				72A612A014858CA9000FF917 /* libvsl.dylib in CopyFiles */,
+				72A612A114858CA9000FF917 /* libx264.118.dylib in CopyFiles */,
+				72A612A214858CA9000FF917 /* libz.1.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7204E6721489646E00D482B9 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		7204E6741489649400D482B9 /* GlobalManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GlobalManager.mm; sourceTree = "<group>"; };
+		7204E676148964A400D482B9 /* GlobalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalManager.h; sourceTree = "<group>"; };
+		7212EA3E147C50C700CB2A8D /* GazerCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GazerCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7212EA42147C50C700CB2A8D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7212EA45147C50C700CB2A8D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7212EA46147C50C700CB2A8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7212EA47147C50C700CB2A8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7212EA4A147C50C700CB2A8D /* GazerCocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GazerCocoa-Info.plist"; sourceTree = "<group>"; };
+		7212EA4C147C50C700CB2A8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7212EA4E147C50C700CB2A8D /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = main.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7212EA50147C50C700CB2A8D /* GazerCocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GazerCocoa-Prefix.pch"; sourceTree = "<group>"; };
+		7212EA52147C50C700CB2A8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7212EA54147C50C700CB2A8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7212EA55147C50C700CB2A8D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = AppDelegate.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7212EA58147C50C700CB2A8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7212EB90147C5BD100CB2A8D /* BlinkDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlinkDetector.h; sourceTree = "<group>"; };
+		7212EB91147C5BD100CB2A8D /* Calibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calibrator.h; sourceTree = "<group>"; };
+		7212EB92147C5BD100CB2A8D /* Containers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Containers.h; sourceTree = "<group>"; };
+		7212EB93147C5BD100CB2A8D /* EyeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeExtractor.h; sourceTree = "<group>"; };
+		7212EB94147C5BD100CB2A8D /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
+		7212EB95147C5BD100CB2A8D /* FeatureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeatureDetector.h; sourceTree = "<group>"; };
+		7212EB96147C5BD100CB2A8D /* FMatrixAffineCompute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMatrixAffineCompute.h; sourceTree = "<group>"; };
+		7212EB98147C5BD100CB2A8D /* GazeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GazeTracker.h; sourceTree = "<group>"; };
+		7212EB99147C5BD100CB2A8D /* GraphicalPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicalPointer.h; sourceTree = "<group>"; };
+		7212EB9A147C5BD100CB2A8D /* HeadTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTracker.h; sourceTree = "<group>"; };
+		7212EB9B147C5BD100CB2A8D /* LeastSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeastSquares.h; sourceTree = "<group>"; };
+		7212EB9C147C5BD100CB2A8D /* MainGazeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGazeTracker.h; sourceTree = "<group>"; };
+		7212EB9D147C5BD100CB2A8D /* OutputMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputMethods.h; sourceTree = "<group>"; };
+		7212EB9F147C5BD100CB2A8D /* PointTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTracker.h; sourceTree = "<group>"; };
+		7212EBA0147C5BD100CB2A8D /* TrackingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingSystem.h; sourceTree = "<group>"; };
+		7212EBA1147C5BD100CB2A8D /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		7212EBA2147C5BD100CB2A8D /* WindowStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowStore.h; sourceTree = "<group>"; };
+		7212EBA3147C5BD100CB2A8D /* BlinkDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlinkDetector.mm; sourceTree = "<group>"; };
+		7212EBA4147C5BD100CB2A8D /* Calibrator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Calibrator.mm; sourceTree = "<group>"; };
+		7212EBA5147C5BD100CB2A8D /* Containers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Containers.mm; sourceTree = "<group>"; };
+		7212EBA6147C5BD100CB2A8D /* EyeExtractor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EyeExtractor.mm; sourceTree = "<group>"; };
+		7212EBA7147C5BD100CB2A8D /* FaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetector.mm; sourceTree = "<group>"; };
+		7212EBA8147C5BD100CB2A8D /* FeatureDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FeatureDetector.mm; sourceTree = "<group>"; };
+		7212EBA9147C5BD100CB2A8D /* FMatrixAffineCompute.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FMatrixAffineCompute.mm; sourceTree = "<group>"; };
+		7212EBAA147C5BD100CB2A8D /* GaussianProcess.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GaussianProcess.mm; sourceTree = "<group>"; };
+		7212EBAC147C5BD100CB2A8D /* GazeTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GazeTracker.mm; sourceTree = "<group>"; };
+		7212EBAD147C5BD100CB2A8D /* GraphicalPointer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GraphicalPointer.mm; sourceTree = "<group>"; };
+		7212EBAE147C5BD100CB2A8D /* HeadCompensation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HeadCompensation.mm; sourceTree = "<group>"; };
+		7212EBAF147C5BD100CB2A8D /* HeadTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HeadTracker.mm; sourceTree = "<group>"; };
+		7212EBB0147C5BD100CB2A8D /* LeastSquares.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeastSquares.mm; sourceTree = "<group>"; };
+		7212EBB1147C5BD100CB2A8D /* MainGazeTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainGazeTracker.mm; sourceTree = "<group>"; };
+		7212EBB2147C5BD100CB2A8D /* opengazerHighGui.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opengazerHighGui.mm; sourceTree = "<group>"; };
+		7212EBB3147C5BD100CB2A8D /* OutputMethods.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OutputMethods.mm; sourceTree = "<group>"; };
+		7212EBB5147C5BD100CB2A8D /* PointTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointTracker.mm; sourceTree = "<group>"; };
+		7212EBB6147C5BD100CB2A8D /* TrackingSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TrackingSystem.mm; sourceTree = "<group>"; };
+		7212EBB7147C5BD100CB2A8D /* utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = utils.mm; sourceTree = "<group>"; };
+		7212EBB8147C5BD100CB2A8D /* WindowStore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WindowStore.mm; sourceTree = "<group>"; };
+		722F1CA11485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		722F1CA21485DBE700276526 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		722F1CB91486B17700276526 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = DEVELOPER_DIR; };
+		722F1CC11486B8D100276526 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		723712461480342D00CF491E /* ogPoint.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ogPoint.mm; sourceTree = "<group>"; };
+		723712471480343100CF491E /* ogPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogPoint.h; sourceTree = "<group>"; };
+		7285AED214821EA60062CA2B /* calpoints.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calpoints.txt; sourceTree = "<group>"; };
+		729A59AF148800D9006155E1 /* calibrationTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calibrationTarget.png; sourceTree = "<group>"; };
+		729A59B114880FDC006155E1 /* GazerCocoaBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GazerCocoaBridge.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		729A59B214880FF3006155E1 /* GazerCocoaBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = GazerCocoaBridge.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		72A611F214858C9E000FF917 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavcodec.dylib; sourceTree = "<group>"; };
+		72A611F314858C9E000FF917 /* libavformat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavformat.dylib; sourceTree = "<group>"; };
+		72A611F414858C9E000FF917 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavutil.dylib; sourceTree = "<group>"; };
+		72A611F514858C9E000FF917 /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libbz2.1.0.dylib; sourceTree = "<group>"; };
+		72A611F614858C9E000FF917 /* libdirac_decoder.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdirac_decoder.0.dylib; sourceTree = "<group>"; };
+		72A611F714858C9E000FF917 /* libdirac_encoder.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdirac_encoder.0.dylib; sourceTree = "<group>"; };
+		72A611F814858C9E000FF917 /* libjasper.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjasper.1.dylib; sourceTree = "<group>"; };
+		72A611F914858C9E000FF917 /* libjbig.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjbig.2.dylib; sourceTree = "<group>"; };
+		72A611FA14858C9E000FF917 /* libjpeg.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.8.dylib; sourceTree = "<group>"; };
+		72A611FB14858C9E000FF917 /* liblcms2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblcms2.2.dylib; sourceTree = "<group>"; };
+		72A611FC14858C9E000FF917 /* libmp3lame.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmp3lame.0.dylib; sourceTree = "<group>"; };
+		72A611FD14858C9E000FF917 /* libnetlib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnetlib.dylib; sourceTree = "<group>"; };
+		72A611FE14858C9E000FF917 /* libogg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libogg.0.dylib; sourceTree = "<group>"; };
+		72A611FF14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120014858C9E000FF917 /* libopencv_calib3d.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.3.dylib; sourceTree = "<group>"; };
+		72A6120114858C9E000FF917 /* libopencv_contrib.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_contrib.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120214858C9E000FF917 /* libopencv_core.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120314858C9E000FF917 /* libopencv_core.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.3.dylib; sourceTree = "<group>"; };
+		72A6120414858C9E000FF917 /* libopencv_features2d.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_features2d.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120514858C9E000FF917 /* libopencv_features2d.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_features2d.2.3.dylib; sourceTree = "<group>"; };
+		72A6120614858C9E000FF917 /* libopencv_flann.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_flann.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120714858C9E000FF917 /* libopencv_flann.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_flann.2.3.dylib; sourceTree = "<group>"; };
+		72A6120814858C9E000FF917 /* libopencv_gpu.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_gpu.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120B14858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120C14858C9E000FF917 /* libopencv_imgproc.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.2.3.dylib; sourceTree = "<group>"; };
+		72A6120D14858C9E000FF917 /* libopencv_legacy.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_legacy.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120E14858C9E000FF917 /* libopencv_ml.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_ml.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6120F14858C9E000FF917 /* libopencv_ml.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_ml.2.3.dylib; sourceTree = "<group>"; };
+		72A6121014858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_objdetect.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6121114858C9E000FF917 /* libopencv_objdetect.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_objdetect.2.3.dylib; sourceTree = "<group>"; };
+		72A6121214858C9E000FF917 /* libopencv_ts.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_ts.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6121314858C9E000FF917 /* libopencv_video.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_video.2.3.1.dylib; sourceTree = "<group>"; };
+		72A6121414858C9E000FF917 /* libopencv_video.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_video.2.3.dylib; sourceTree = "<group>"; };
+		72A6121514858C9E000FF917 /* libopenjpeg.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopenjpeg.1.dylib; sourceTree = "<group>"; };
+		72A6121614858C9E000FF917 /* liborc-0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "liborc-0.4.0.dylib"; sourceTree = "<group>"; };
+		72A6121714858C9E000FF917 /* libpng14.14.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng14.14.dylib; sourceTree = "<group>"; };
+		72A6121B14858C9E000FF917 /* libschroedinger-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libschroedinger-1.0.0.dylib"; sourceTree = "<group>"; };
+		72A6121C14858C9E000FF917 /* libSDL-1.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libSDL-1.2.0.dylib"; sourceTree = "<group>"; };
+		72A6121D14858C9E000FF917 /* libspeex.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libspeex.1.dylib; sourceTree = "<group>"; };
+		72A6121E14858C9E000FF917 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libswscale.dylib; sourceTree = "<group>"; };
+		72A6121F14858C9E000FF917 /* libtheoradec.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtheoradec.1.dylib; sourceTree = "<group>"; };
+		72A6122014858C9E000FF917 /* libtheoraenc.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtheoraenc.1.dylib; sourceTree = "<group>"; };
+		72A6122114858C9E000FF917 /* libtiff.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiff.3.dylib; sourceTree = "<group>"; };
+		72A6122214858C9E000FF917 /* libv3p_netlib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libv3p_netlib.dylib; sourceTree = "<group>"; };
+		72A6122314858C9E000FF917 /* libvcl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvcl.dylib; sourceTree = "<group>"; };
+		72A6122414858C9E000FF917 /* libvnl_algo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvnl_algo.dylib; sourceTree = "<group>"; };
+		72A6122514858C9E000FF917 /* libvnl_io.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvnl_io.dylib; sourceTree = "<group>"; };
+		72A6122614858C9E000FF917 /* libvnl_xio.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvnl_xio.dylib; sourceTree = "<group>"; };
+		72A6122714858C9E000FF917 /* libvnl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvnl.dylib; sourceTree = "<group>"; };
+		72A6122814858C9E000FF917 /* libvorbis.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvorbis.0.dylib; sourceTree = "<group>"; };
+		72A6122914858C9E000FF917 /* libvorbisenc.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvorbisenc.2.dylib; sourceTree = "<group>"; };
+		72A6122A14858C9E000FF917 /* libvsl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libvsl.dylib; sourceTree = "<group>"; };
+		72A6122B14858C9E000FF917 /* libx264.118.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libx264.118.dylib; sourceTree = "<group>"; };
+		72A6122C14858C9E000FF917 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.1.dylib; sourceTree = "<group>"; };
+		72AF309D1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.2.3.1.dylib; sourceTree = "<group>"; };
+		72AF309E1485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.2.3.dylib; sourceTree = "<group>"; };
+		AE03699214917EAD0098174A /* lcGazeKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcGazeKeys.h; sourceTree = "<group>"; };
+		AE1D9F26148F35D9009FB298 /* gazeTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gazeTarget.png; sourceTree = "<group>"; };
+		AE1D9F28149002ED009FB298 /* LCGazeTrackerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeTrackerWindowController.h; sourceTree = "<group>"; };
+		AE1D9F29149002EE009FB298 /* LCGazeTrackerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGazeTrackerWindowController.m; sourceTree = "<group>"; };
+		AE1D9F2B14901373009FB298 /* GazeTrackerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GazeTrackerWindow.xib; sourceTree = "<group>"; };
+		AE301A01149698AB00BBA5FF /* LCCalibrationFaceTrackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationFaceTrackingView.h; sourceTree = "<group>"; };
+		AE301A02149698AB00BBA5FF /* LCCalibrationFaceTrackingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCalibrationFaceTrackingView.m; sourceTree = "<group>"; };
+		AE301A071496A2BE00BBA5FF /* CaptureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureView.h; sourceTree = "<group>"; };
+		AE301A081496A2C800BBA5FF /* CaptureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureView.m; sourceTree = "<group>"; };
+		AE55643F14927BEF0036008D /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyCenter.h; path = DDHotKey/DDHotKeyCenter.h; sourceTree = "<group>"; };
+		AE55644014927BEF0036008D /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyCenter.m; path = DDHotKey/DDHotKeyCenter.m; sourceTree = "<group>"; };
+		AE556442149280950036008D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		AE815A9914863FA6009E362E /* LCCalibrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationView.h; sourceTree = "<group>"; };
+		AE815A9A14863FA6009E362E /* LCCalibrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCalibrationView.m; sourceTree = "<group>"; };
+		AE815A9B14863FA6009E362E /* LCCalibrationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LCCalibrationWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		AE815A9C14863FA6009E362E /* LCCalibrationWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = LCCalibrationWindowController.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		AE815A9D14863FA6009E362E /* LCCalibrationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationLayer.h; sourceTree = "<group>"; };
+		AE815A9E14863FA6009E362E /* LCCalibrationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCalibrationLayer.m; sourceTree = "<group>"; };
+		AE815A9F14863FA6009E362E /* LCDummyGazeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDummyGazeTracker.h; sourceTree = "<group>"; };
+		AE815AA014863FA6009E362E /* LCDummyGazeTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDummyGazeTracker.m; sourceTree = "<group>"; };
+		AE815AA114863FA6009E362E /* LCGazePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazePoint.h; sourceTree = "<group>"; };
+		AE815AA214863FA6009E362E /* LCGazePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGazePoint.m; sourceTree = "<group>"; };
+		AE815AA314863FA6009E362E /* LCCalibrationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationPoint.h; sourceTree = "<group>"; };
+		AE815AA414863FA6009E362E /* LCCalibrationPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCalibrationPoint.m; sourceTree = "<group>"; };
+		AE815AA514863FA6009E362E /* LCGazeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeListener.h; sourceTree = "<group>"; };
+		AE815AA614863FA6009E362E /* LCGazeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeTracker.h; sourceTree = "<group>"; };
+		AE815AA714863FA6009E362E /* LCGazeCalibratorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeCalibratorInterface.h; sourceTree = "<group>"; };
+		AE815AA814863FA6009E362E /* LCGazeFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeFoundation.h; sourceTree = "<group>"; };
+		AE815AA914863FA6009E362E /* LCGazeMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeMonitor.h; sourceTree = "<group>"; };
+		AE815AB014863FCF009E362E /* CalibrationWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalibrationWindow.xib; sourceTree = "<group>"; };
+		AEEAA607148C44E20049271E /* LCCalibrationCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationCameraView.h; sourceTree = "<group>"; };
+		AEEAA608148C44E20049271E /* LCCalibrationCameraView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = LCCalibrationCameraView.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7212EA3B147C50C700CB2A8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE556443149280950036008D /* Carbon.framework in Frameworks */,
+				722F1CC21486B8D100276526 /* QuartzCore.framework in Frameworks */,
+				722F1CBC1486B19300276526 /* QTKit.framework in Frameworks */,
+				7212EA43147C50C700CB2A8D /* Cocoa.framework in Frameworks */,
+				72A6122D14858C9E000FF917 /* libavcodec.dylib in Frameworks */,
+				72A6122E14858C9E000FF917 /* libavformat.dylib in Frameworks */,
+				72A6122F14858C9E000FF917 /* libavutil.dylib in Frameworks */,
+				72A6123014858C9E000FF917 /* libbz2.1.0.dylib in Frameworks */,
+				72A6123114858C9E000FF917 /* libdirac_decoder.0.dylib in Frameworks */,
+				72A6123214858C9E000FF917 /* libdirac_encoder.0.dylib in Frameworks */,
+				72A6123314858C9E000FF917 /* libjasper.1.dylib in Frameworks */,
+				72A6123414858C9E000FF917 /* libjbig.2.dylib in Frameworks */,
+				72A6123514858C9E000FF917 /* libjpeg.8.dylib in Frameworks */,
+				72A6123614858C9E000FF917 /* liblcms2.2.dylib in Frameworks */,
+				72A6123714858C9E000FF917 /* libmp3lame.0.dylib in Frameworks */,
+				72A6123814858C9E000FF917 /* libnetlib.dylib in Frameworks */,
+				72A6123914858C9E000FF917 /* libogg.0.dylib in Frameworks */,
+				72A6123A14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib in Frameworks */,
+				72A6123B14858C9E000FF917 /* libopencv_calib3d.2.3.dylib in Frameworks */,
+				72A6123C14858C9E000FF917 /* libopencv_contrib.2.3.1.dylib in Frameworks */,
+				72A6123D14858C9E000FF917 /* libopencv_core.2.3.1.dylib in Frameworks */,
+				72A6123E14858C9E000FF917 /* libopencv_core.2.3.dylib in Frameworks */,
+				72A6123F14858C9E000FF917 /* libopencv_features2d.2.3.1.dylib in Frameworks */,
+				72A6124014858C9E000FF917 /* libopencv_features2d.2.3.dylib in Frameworks */,
+				72A6124114858C9E000FF917 /* libopencv_flann.2.3.1.dylib in Frameworks */,
+				72A6124214858C9E000FF917 /* libopencv_flann.2.3.dylib in Frameworks */,
+				72A6124314858C9E000FF917 /* libopencv_gpu.2.3.1.dylib in Frameworks */,
+				72A6124614858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib in Frameworks */,
+				72A6124714858C9E000FF917 /* libopencv_imgproc.2.3.dylib in Frameworks */,
+				72A6124814858C9E000FF917 /* libopencv_legacy.2.3.1.dylib in Frameworks */,
+				72A6124914858C9E000FF917 /* libopencv_ml.2.3.1.dylib in Frameworks */,
+				72A6124A14858C9E000FF917 /* libopencv_ml.2.3.dylib in Frameworks */,
+				72A6124B14858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib in Frameworks */,
+				72A6124C14858C9E000FF917 /* libopencv_objdetect.2.3.dylib in Frameworks */,
+				72A6124D14858C9E000FF917 /* libopencv_ts.2.3.1.dylib in Frameworks */,
+				72A6124E14858C9E000FF917 /* libopencv_video.2.3.1.dylib in Frameworks */,
+				72A6124F14858C9E000FF917 /* libopencv_video.2.3.dylib in Frameworks */,
+				72A6125014858C9E000FF917 /* libopenjpeg.1.dylib in Frameworks */,
+				72A6125114858C9E000FF917 /* liborc-0.4.0.dylib in Frameworks */,
+				72A6125214858C9E000FF917 /* libpng14.14.dylib in Frameworks */,
+				72A6125614858C9E000FF917 /* libschroedinger-1.0.0.dylib in Frameworks */,
+				72A6125714858C9E000FF917 /* libSDL-1.2.0.dylib in Frameworks */,
+				72A6125814858C9E000FF917 /* libspeex.1.dylib in Frameworks */,
+				72A6125914858C9E000FF917 /* libswscale.dylib in Frameworks */,
+				72A6125A14858C9E000FF917 /* libtheoradec.1.dylib in Frameworks */,
+				72A6125B14858C9E000FF917 /* libtheoraenc.1.dylib in Frameworks */,
+				72A6125C14858C9E000FF917 /* libtiff.3.dylib in Frameworks */,
+				72A6125D14858C9E000FF917 /* libv3p_netlib.dylib in Frameworks */,
+				72A6125E14858C9E000FF917 /* libvcl.dylib in Frameworks */,
+				72A6125F14858C9E000FF917 /* libvnl_algo.dylib in Frameworks */,
+				72A6126014858C9E000FF917 /* libvnl_io.dylib in Frameworks */,
+				72A6126114858C9E000FF917 /* libvnl_xio.dylib in Frameworks */,
+				72A6126214858C9E000FF917 /* libvnl.dylib in Frameworks */,
+				72A6126314858C9E000FF917 /* libvorbis.0.dylib in Frameworks */,
+				72A6126414858C9E000FF917 /* libvorbisenc.2.dylib in Frameworks */,
+				72A6126514858C9E000FF917 /* libvsl.dylib in Frameworks */,
+				72A6126614858C9E000FF917 /* libx264.118.dylib in Frameworks */,
+				72A6126714858C9E000FF917 /* libz.1.dylib in Frameworks */,
+				72AF309F1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib in Frameworks */,
+				72AF30A01485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7212EA33147C50C600CB2A8D = {
+			isa = PBXGroup;
+			children = (
+				7212EAC6147C516500CB2A8D /* opengazer */,
+				7212EA5F147C50DF00CB2A8D /* dylibs */,
+				7212EA48147C50C700CB2A8D /* GazerCocoa */,
+				729A599F14874C78006155E1 /* Resources */,
+				7212EA41147C50C700CB2A8D /* Frameworks */,
+				7212EA3F147C50C700CB2A8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7212EA3F147C50C700CB2A8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7212EA3E147C50C700CB2A8D /* GazerCocoa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7212EA41147C50C700CB2A8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE556442149280950036008D /* Carbon.framework */,
+				AE55643D14927B820036008D /* DDHotKey */,
+				7212EA42147C50C700CB2A8D /* Cocoa.framework */,
+				7212EA44147C50C700CB2A8D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7212EA44147C50C700CB2A8D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				722F1CC11486B8D100276526 /* QuartzCore.framework */,
+				722F1CB91486B17700276526 /* QTKit.framework */,
+				7212EA45147C50C700CB2A8D /* AppKit.framework */,
+				7212EA46147C50C700CB2A8D /* CoreData.framework */,
+				7212EA47147C50C700CB2A8D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7212EA48147C50C700CB2A8D /* GazerCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				AE815A9414863F50009E362E /* LCGazeFoundation */,
+				7212EA54147C50C700CB2A8D /* AppDelegate.h */,
+				7212EA55147C50C700CB2A8D /* AppDelegate.mm */,
+				7212EA57147C50C700CB2A8D /* MainMenu.xib */,
+				7212EA49147C50C700CB2A8D /* Supporting Files */,
+			);
+			path = GazerCocoa;
+			sourceTree = "<group>";
+		};
+		7212EA49147C50C700CB2A8D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7204E6721489646E00D482B9 /* SynthesizeSingleton.h */,
+				7212EA4A147C50C700CB2A8D /* GazerCocoa-Info.plist */,
+				7212EA4B147C50C700CB2A8D /* InfoPlist.strings */,
+				7212EA4E147C50C700CB2A8D /* main.mm */,
+				7212EA50147C50C700CB2A8D /* GazerCocoa-Prefix.pch */,
+				7212EA51147C50C700CB2A8D /* Credits.rtf */,
+				729A59B114880FDC006155E1 /* GazerCocoaBridge.h */,
+				729A59B214880FF3006155E1 /* GazerCocoaBridge.mm */,
+				7204E6741489649400D482B9 /* GlobalManager.mm */,
+				7204E676148964A400D482B9 /* GlobalManager.h */,
+				AE03699214917EAD0098174A /* lcGazeKeys.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7212EA5F147C50DF00CB2A8D /* dylibs */ = {
+			isa = PBXGroup;
+			children = (
+				72AF309D1485A2FD00EDF5CF /* libopencv_highgui.2.3.1.dylib */,
+				72AF309E1485A2FD00EDF5CF /* libopencv_highgui.2.3.dylib */,
+				72A611F214858C9E000FF917 /* libavcodec.dylib */,
+				72A611F314858C9E000FF917 /* libavformat.dylib */,
+				72A611F414858C9E000FF917 /* libavutil.dylib */,
+				72A611F514858C9E000FF917 /* libbz2.1.0.dylib */,
+				72A611F614858C9E000FF917 /* libdirac_decoder.0.dylib */,
+				72A611F714858C9E000FF917 /* libdirac_encoder.0.dylib */,
+				72A611F814858C9E000FF917 /* libjasper.1.dylib */,
+				72A611F914858C9E000FF917 /* libjbig.2.dylib */,
+				72A611FA14858C9E000FF917 /* libjpeg.8.dylib */,
+				72A611FB14858C9E000FF917 /* liblcms2.2.dylib */,
+				72A611FC14858C9E000FF917 /* libmp3lame.0.dylib */,
+				72A611FD14858C9E000FF917 /* libnetlib.dylib */,
+				72A611FE14858C9E000FF917 /* libogg.0.dylib */,
+				72A611FF14858C9E000FF917 /* libopencv_calib3d.2.3.1.dylib */,
+				72A6120014858C9E000FF917 /* libopencv_calib3d.2.3.dylib */,
+				72A6120114858C9E000FF917 /* libopencv_contrib.2.3.1.dylib */,
+				72A6120214858C9E000FF917 /* libopencv_core.2.3.1.dylib */,
+				72A6120314858C9E000FF917 /* libopencv_core.2.3.dylib */,
+				72A6120414858C9E000FF917 /* libopencv_features2d.2.3.1.dylib */,
+				72A6120514858C9E000FF917 /* libopencv_features2d.2.3.dylib */,
+				72A6120614858C9E000FF917 /* libopencv_flann.2.3.1.dylib */,
+				72A6120714858C9E000FF917 /* libopencv_flann.2.3.dylib */,
+				72A6120814858C9E000FF917 /* libopencv_gpu.2.3.1.dylib */,
+				72A6120B14858C9E000FF917 /* libopencv_imgproc.2.3.1.dylib */,
+				72A6120C14858C9E000FF917 /* libopencv_imgproc.2.3.dylib */,
+				72A6120D14858C9E000FF917 /* libopencv_legacy.2.3.1.dylib */,
+				72A6120E14858C9E000FF917 /* libopencv_ml.2.3.1.dylib */,
+				72A6120F14858C9E000FF917 /* libopencv_ml.2.3.dylib */,
+				72A6121014858C9E000FF917 /* libopencv_objdetect.2.3.1.dylib */,
+				72A6121114858C9E000FF917 /* libopencv_objdetect.2.3.dylib */,
+				72A6121214858C9E000FF917 /* libopencv_ts.2.3.1.dylib */,
+				72A6121314858C9E000FF917 /* libopencv_video.2.3.1.dylib */,
+				72A6121414858C9E000FF917 /* libopencv_video.2.3.dylib */,
+				72A6121514858C9E000FF917 /* libopenjpeg.1.dylib */,
+				72A6121614858C9E000FF917 /* liborc-0.4.0.dylib */,
+				72A6121714858C9E000FF917 /* libpng14.14.dylib */,
+				72A6121B14858C9E000FF917 /* libschroedinger-1.0.0.dylib */,
+				72A6121C14858C9E000FF917 /* libSDL-1.2.0.dylib */,
+				72A6121D14858C9E000FF917 /* libspeex.1.dylib */,
+				72A6121E14858C9E000FF917 /* libswscale.dylib */,
+				72A6121F14858C9E000FF917 /* libtheoradec.1.dylib */,
+				72A6122014858C9E000FF917 /* libtheoraenc.1.dylib */,
+				72A6122114858C9E000FF917 /* libtiff.3.dylib */,
+				72A6122214858C9E000FF917 /* libv3p_netlib.dylib */,
+				72A6122314858C9E000FF917 /* libvcl.dylib */,
+				72A6122414858C9E000FF917 /* libvnl_algo.dylib */,
+				72A6122514858C9E000FF917 /* libvnl_io.dylib */,
+				72A6122614858C9E000FF917 /* libvnl_xio.dylib */,
+				72A6122714858C9E000FF917 /* libvnl.dylib */,
+				72A6122814858C9E000FF917 /* libvorbis.0.dylib */,
+				72A6122914858C9E000FF917 /* libvorbisenc.2.dylib */,
+				72A6122A14858C9E000FF917 /* libvsl.dylib */,
+				72A6122B14858C9E000FF917 /* libx264.118.dylib */,
+				72A6122C14858C9E000FF917 /* libz.1.dylib */,
+			);
+			path = dylibs;
+			sourceTree = "<group>";
+		};
+		7212EAC6147C516500CB2A8D /* opengazer */ = {
+			isa = PBXGroup;
+			children = (
+				722F1CA11485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml */,
+				722F1CA21485DBE700276526 /* haarcascade_frontalface_alt.xml */,
+				7285AED214821EA60062CA2B /* calpoints.txt */,
+				723712461480342D00CF491E /* ogPoint.mm */,
+				723712471480343100CF491E /* ogPoint.h */,
+				7212EB90147C5BD100CB2A8D /* BlinkDetector.h */,
+				7212EB91147C5BD100CB2A8D /* Calibrator.h */,
+				7212EB92147C5BD100CB2A8D /* Containers.h */,
+				7212EB93147C5BD100CB2A8D /* EyeExtractor.h */,
+				7212EB94147C5BD100CB2A8D /* FaceDetector.h */,
+				7212EB95147C5BD100CB2A8D /* FeatureDetector.h */,
+				7212EB96147C5BD100CB2A8D /* FMatrixAffineCompute.h */,
+				7212EB98147C5BD100CB2A8D /* GazeTracker.h */,
+				7212EB99147C5BD100CB2A8D /* GraphicalPointer.h */,
+				7212EB9A147C5BD100CB2A8D /* HeadTracker.h */,
+				7212EB9B147C5BD100CB2A8D /* LeastSquares.h */,
+				7212EB9C147C5BD100CB2A8D /* MainGazeTracker.h */,
+				7212EB9D147C5BD100CB2A8D /* OutputMethods.h */,
+				7212EB9F147C5BD100CB2A8D /* PointTracker.h */,
+				7212EBA0147C5BD100CB2A8D /* TrackingSystem.h */,
+				7212EBA1147C5BD100CB2A8D /* utils.h */,
+				7212EBA2147C5BD100CB2A8D /* WindowStore.h */,
+				7212EBA3147C5BD100CB2A8D /* BlinkDetector.mm */,
+				7212EBA4147C5BD100CB2A8D /* Calibrator.mm */,
+				7212EBA5147C5BD100CB2A8D /* Containers.mm */,
+				7212EBA6147C5BD100CB2A8D /* EyeExtractor.mm */,
+				7212EBA7147C5BD100CB2A8D /* FaceDetector.mm */,
+				7212EBA8147C5BD100CB2A8D /* FeatureDetector.mm */,
+				7212EBA9147C5BD100CB2A8D /* FMatrixAffineCompute.mm */,
+				7212EBAA147C5BD100CB2A8D /* GaussianProcess.mm */,
+				7212EBAC147C5BD100CB2A8D /* GazeTracker.mm */,
+				7212EBAD147C5BD100CB2A8D /* GraphicalPointer.mm */,
+				7212EBAE147C5BD100CB2A8D /* HeadCompensation.mm */,
+				7212EBAF147C5BD100CB2A8D /* HeadTracker.mm */,
+				7212EBB0147C5BD100CB2A8D /* LeastSquares.mm */,
+				7212EBB1147C5BD100CB2A8D /* MainGazeTracker.mm */,
+				7212EBB2147C5BD100CB2A8D /* opengazerHighGui.mm */,
+				7212EBB3147C5BD100CB2A8D /* OutputMethods.mm */,
+				7212EBB5147C5BD100CB2A8D /* PointTracker.mm */,
+				7212EBB6147C5BD100CB2A8D /* TrackingSystem.mm */,
+				7212EBB7147C5BD100CB2A8D /* utils.mm */,
+				7212EBB8147C5BD100CB2A8D /* WindowStore.mm */,
+			);
+			path = opengazer;
+			sourceTree = "<group>";
+		};
+		729A599F14874C78006155E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE1D9F26148F35D9009FB298 /* gazeTarget.png */,
+				729A59AF148800D9006155E1 /* calibrationTarget.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AE55643D14927B820036008D /* DDHotKey */ = {
+			isa = PBXGroup;
+			children = (
+				AE55643F14927BEF0036008D /* DDHotKeyCenter.h */,
+				AE55644014927BEF0036008D /* DDHotKeyCenter.m */,
+			);
+			name = DDHotKey;
+			sourceTree = "<group>";
+		};
+		AE815A9414863F50009E362E /* LCGazeFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				AE301A081496A2C800BBA5FF /* CaptureView.m */,
+				AE301A071496A2BE00BBA5FF /* CaptureView.h */,
+				AEEAA607148C44E20049271E /* LCCalibrationCameraView.h */,
+				AEEAA608148C44E20049271E /* LCCalibrationCameraView.mm */,
+				AE301A01149698AB00BBA5FF /* LCCalibrationFaceTrackingView.h */,
+				AE301A02149698AB00BBA5FF /* LCCalibrationFaceTrackingView.m */,
+				AE815A9914863FA6009E362E /* LCCalibrationView.h */,
+				AE815A9A14863FA6009E362E /* LCCalibrationView.m */,
+				AE815A9B14863FA6009E362E /* LCCalibrationWindowController.h */,
+				AE815A9C14863FA6009E362E /* LCCalibrationWindowController.mm */,
+				AE815A9D14863FA6009E362E /* LCCalibrationLayer.h */,
+				AE815A9E14863FA6009E362E /* LCCalibrationLayer.m */,
+				AE815A9F14863FA6009E362E /* LCDummyGazeTracker.h */,
+				AE815AA014863FA6009E362E /* LCDummyGazeTracker.m */,
+				AE815AA114863FA6009E362E /* LCGazePoint.h */,
+				AE815AA214863FA6009E362E /* LCGazePoint.m */,
+				AE815AA314863FA6009E362E /* LCCalibrationPoint.h */,
+				AE815AA414863FA6009E362E /* LCCalibrationPoint.m */,
+				AE1D9F28149002ED009FB298 /* LCGazeTrackerWindowController.h */,
+				AE1D9F29149002EE009FB298 /* LCGazeTrackerWindowController.m */,
+				AE815AA514863FA6009E362E /* LCGazeListener.h */,
+				AE815AA614863FA6009E362E /* LCGazeTracker.h */,
+				AE815AA714863FA6009E362E /* LCGazeCalibratorInterface.h */,
+				AE815AA814863FA6009E362E /* LCGazeFoundation.h */,
+				AE815AA914863FA6009E362E /* LCGazeMonitor.h */,
+				AE815AB014863FCF009E362E /* CalibrationWindow.xib */,
+				AE1D9F2B14901373009FB298 /* GazeTrackerWindow.xib */,
+			);
+			name = LCGazeFoundation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7212EA3D147C50C700CB2A8D /* GazerCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7212EA5C147C50C700CB2A8D /* Build configuration list for PBXNativeTarget "GazerCocoa" */;
+			buildPhases = (
+				7212EA3A147C50C700CB2A8D /* Sources */,
+				7212EA3B147C50C700CB2A8D /* Frameworks */,
+				7212EA3C147C50C700CB2A8D /* Resources */,
+				72A611D414858604000FF917 /* CopyFiles */,
+				722F1CA61485E1A000276526 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GazerCocoa;
+			productName = gazercocoa;
+			productReference = 7212EA3E147C50C700CB2A8D /* GazerCocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7212EA35147C50C600CB2A8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Lab Cogs Co.";
+			};
+			buildConfigurationList = 7212EA38147C50C600CB2A8D /* Build configuration list for PBXProject "GazerCocoa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7212EA33147C50C600CB2A8D;
+			productRefGroup = 7212EA3F147C50C700CB2A8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7212EA3D147C50C700CB2A8D /* GazerCocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7212EA3C147C50C700CB2A8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7212EA4D147C50C700CB2A8D /* InfoPlist.strings in Resources */,
+				7212EA53147C50C700CB2A8D /* Credits.rtf in Resources */,
+				7212EA59147C50C700CB2A8D /* MainMenu.xib in Resources */,
+				7285AED314821EA60062CA2B /* calpoints.txt in Resources */,
+				722F1CA31485DBE700276526 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				722F1CA41485DBE700276526 /* haarcascade_frontalface_alt.xml in Resources */,
+				AE815AB114863FCF009E362E /* CalibrationWindow.xib in Resources */,
+				729A59B0148800D9006155E1 /* calibrationTarget.png in Resources */,
+				AE1D9F27148F35D9009FB298 /* gazeTarget.png in Resources */,
+				AE1D9F2C14901374009FB298 /* GazeTrackerWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7212EA3A147C50C700CB2A8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7212EA4F147C50C700CB2A8D /* main.mm in Sources */,
+				7212EA56147C50C700CB2A8D /* AppDelegate.mm in Sources */,
+				7212EBB9147C5BD100CB2A8D /* BlinkDetector.mm in Sources */,
+				7212EBBA147C5BD100CB2A8D /* Calibrator.mm in Sources */,
+				7212EBBB147C5BD100CB2A8D /* Containers.mm in Sources */,
+				7212EBBC147C5BD100CB2A8D /* EyeExtractor.mm in Sources */,
+				7212EBBD147C5BD100CB2A8D /* FaceDetector.mm in Sources */,
+				7212EBBE147C5BD100CB2A8D /* FeatureDetector.mm in Sources */,
+				7212EBBF147C5BD100CB2A8D /* FMatrixAffineCompute.mm in Sources */,
+				7212EBC0147C5BD100CB2A8D /* GaussianProcess.mm in Sources */,
+				7212EBC2147C5BD100CB2A8D /* GazeTracker.mm in Sources */,
+				7212EBC3147C5BD100CB2A8D /* GraphicalPointer.mm in Sources */,
+				7212EBC4147C5BD100CB2A8D /* HeadCompensation.mm in Sources */,
+				7212EBC5147C5BD100CB2A8D /* HeadTracker.mm in Sources */,
+				7212EBC6147C5BD100CB2A8D /* LeastSquares.mm in Sources */,
+				7212EBC7147C5BD100CB2A8D /* MainGazeTracker.mm in Sources */,
+				7212EBC8147C5BD100CB2A8D /* opengazerHighGui.mm in Sources */,
+				7212EBC9147C5BD100CB2A8D /* OutputMethods.mm in Sources */,
+				7212EBCB147C5BD100CB2A8D /* PointTracker.mm in Sources */,
+				7212EBCC147C5BD100CB2A8D /* TrackingSystem.mm in Sources */,
+				7212EBCD147C5BD100CB2A8D /* utils.mm in Sources */,
+				7212EBCE147C5BD100CB2A8D /* WindowStore.mm in Sources */,
+				723712481480343300CF491E /* ogPoint.mm in Sources */,
+				AE815AAA14863FA6009E362E /* LCCalibrationView.m in Sources */,
+				AE815AAB14863FA6009E362E /* LCCalibrationWindowController.mm in Sources */,
+				AE815AAC14863FA6009E362E /* LCCalibrationLayer.m in Sources */,
+				AE815AAD14863FA6009E362E /* LCDummyGazeTracker.m in Sources */,
+				AE815AAE14863FA6009E362E /* LCGazePoint.m in Sources */,
+				AE815AAF14863FA6009E362E /* LCCalibrationPoint.m in Sources */,
+				729A59B314880FF3006155E1 /* GazerCocoaBridge.mm in Sources */,
+				7204E6751489649400D482B9 /* GlobalManager.mm in Sources */,
+				AEEAA609148C44E20049271E /* LCCalibrationCameraView.mm in Sources */,
+				AE1D9F2A149002EE009FB298 /* LCGazeTrackerWindowController.m in Sources */,
+				AE55644114927BEF0036008D /* DDHotKeyCenter.m in Sources */,
+				AE301A03149698AB00BBA5FF /* LCCalibrationFaceTrackingView.m in Sources */,
+				AE301A091496A2C900BBA5FF /* CaptureView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7212EA4B147C50C700CB2A8D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7212EA4C147C50C700CB2A8D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7212EA51147C50C700CB2A8D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7212EA52147C50C700CB2A8D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7212EA57147C50C700CB2A8D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7212EA58147C50C700CB2A8D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7212EA5A147C50C700CB2A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7212EA5B147C50C700CB2A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7212EA5D147C50C700CB2A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${SRCROOT}/dylibs\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GazerCocoa/GazerCocoa-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = CONFIGURATION_Debug;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/vxl/vcl,
+					/opt/local/include/boost,
+					/opt/local/include/vxl/core/vnl,
+					/opt/local/include/vxl/core,
+					/opt/local/include/vxl,
+					/opt/local/include,
+					/opt/local/include/opencv,
+					/usr/local/include/vxl/vcl,
+					/usr/local/include/boost,
+					/usr/local/include/vxl/core/vnl,
+					/usr/local/include/vxl/core,
+					/usr/local/include/vxl,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "GazerCocoa/GazerCocoa-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dylibs\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = GazerCocoa;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7212EA5E147C50C700CB2A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${SRCROOT}/dylibs\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GazerCocoa/GazerCocoa-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = CONFIGURATION_Release;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/vxl/vcl,
+					/opt/local/include/boost,
+					/opt/local/include/vxl/core/vnl,
+					/opt/local/include/vxl/core,
+					/opt/local/include/vxl,
+					/opt/local/include,
+					/opt/local/include/opencv,
+					/usr/local/include/vxl/vcl,
+					/usr/local/include/boost,
+					/usr/local/include/vxl/core/vnl,
+					/usr/local/include/vxl/core,
+					/usr/local/include/vxl,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "GazerCocoa/GazerCocoa-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dylibs\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = GazerCocoa;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AE0369931491824F0098174A /* Debug OpenCV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = "Debug OpenCV";
+		};
+		AE0369941491824F0098174A /* Debug OpenCV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${SRCROOT}/dylibs\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GazerCocoa/GazerCocoa-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CONFIGURATION_Debug_OpenCV,
+					CONFIGURATION_Debug_GUI,
+					CONFIGURATION_Debug,
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/vxl/vcl,
+					/opt/local/include/boost,
+					/opt/local/include/vxl/core/vnl,
+					/opt/local/include/vxl/core,
+					/opt/local/include/vxl,
+					/opt/local/include,
+					/opt/local/include/opencv,
+					/usr/local/include/vxl/vcl,
+					/usr/local/include/boost,
+					/usr/local/include/vxl/core/vnl,
+					/usr/local/include/vxl/core,
+					/usr/local/include/vxl,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "GazerCocoa/GazerCocoa-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dylibs\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = GazerCocoa;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Debug OpenCV";
+		};
+		AE21EF4B14913A5000D9AEF5 /* Debug GUI */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = "Debug GUI";
+		};
+		AE21EF4C14913A5000D9AEF5 /* Debug GUI */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${SRCROOT}/dylibs\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GazerCocoa/GazerCocoa-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CONFIGURATION_Debug_GUI,
+					CONFIGURATION_Debug,
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/vxl/vcl,
+					/opt/local/include/boost,
+					/opt/local/include/vxl/core/vnl,
+					/opt/local/include/vxl/core,
+					/opt/local/include/vxl,
+					/opt/local/include,
+					/opt/local/include/opencv,
+					/usr/local/include/vxl/vcl,
+					/usr/local/include/boost,
+					/usr/local/include/vxl/core/vnl,
+					/usr/local/include/vxl/core,
+					/usr/local/include/vxl,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "GazerCocoa/GazerCocoa-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dylibs\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = GazerCocoa;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Debug GUI";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7212EA38147C50C600CB2A8D /* Build configuration list for PBXProject "GazerCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7212EA5A147C50C700CB2A8D /* Debug */,
+				AE21EF4B14913A5000D9AEF5 /* Debug GUI */,
+				AE0369931491824F0098174A /* Debug OpenCV */,
+				7212EA5B147C50C700CB2A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7212EA5C147C50C700CB2A8D /* Build configuration list for PBXNativeTarget "GazerCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7212EA5D147C50C700CB2A8D /* Debug */,
+				AE21EF4C14913A5000D9AEF5 /* Debug GUI */,
+				AE0369941491824F0098174A /* Debug OpenCV */,
+				7212EA5E147C50C700CB2A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7212EA35147C50C600CB2A8D /* Project object */;
+}
