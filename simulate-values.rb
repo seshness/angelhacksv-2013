@@ -14,8 +14,10 @@ while true
     @redis.publish('location', %|{"x":#{x},"y":#{y}}|)
     y += scroll_amount
     sleep 0.75
+  end
   while y > 0 do
     @redis.publish('location', %|{"x":#{x},"y":#{y}}|)
     y -= scroll_amount
     sleep 0.75
+  end
 end
