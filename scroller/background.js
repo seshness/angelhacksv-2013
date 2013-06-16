@@ -91,7 +91,7 @@ var ScrollingEngine = function(
   return this;
 };
 
-var recentEyeLocations = new LastNThings(20),
+var recentEyeLocations = new LastNThings(100),
     engine = new ScrollingEngine(recentEyeLocations, kSmoothingAlpha, kTopFraction, kBottomFraction);
 
 function onMessage(evt) {
