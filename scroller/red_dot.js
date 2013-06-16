@@ -1,8 +1,8 @@
 $('body').append('<div id="eyeTrackingDot"></div>');
 $('#eyeTrackingDot').css({
-    'border-radius': '20px',
-    width: '30px',
-    height: '30px',
+    'border-radius': '40px',
+    width: '50px',
+    height: '50px',
     'background-color': 'red',
     'box-shadow': '0 0 15px 10px #ccc'
   });
