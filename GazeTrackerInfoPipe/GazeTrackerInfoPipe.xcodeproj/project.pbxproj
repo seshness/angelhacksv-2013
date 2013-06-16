@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B4AF896176D54D5000F5249 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A3C4176D30DA00D577DC /* CSAppDelegate.m */; };
-		5B4AF89E176D6220000F5249 /* redis-objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4AF89D176D6220000F5249 /* redis-objc.framework */; };
+		5B4AF8A0176D853E000F5249 /* redis-objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4AF89F176D853E000F5249 /* redis-objc.framework */; };
 		5B83A3B2176D30DA00D577DC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B83A3B1176D30DA00D577DC /* Cocoa.framework */; };
 		5B83A3BC176D30DA00D577DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B83A3BA176D30DA00D577DC /* InfoPlist.strings */; };
 		5B83A3BE176D30DA00D577DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A3BD176D30DA00D577DC /* main.m */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B4AF89D176D6220000F5249 /* redis-objc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "redis-objc.framework"; sourceTree = "<group>"; };
+		5B4AF89F176D853E000F5249 /* redis-objc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "redis-objc.framework"; sourceTree = "<group>"; };
 		5B83A3AE176D30DA00D577DC /* GazeTrackerInfoPipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GazeTrackerInfoPipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B83A3B1176D30DA00D577DC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5B83A3B4176D30DA00D577DC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,7 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B83A3B2176D30DA00D577DC /* Cocoa.framework in Frameworks */,
-				5B4AF89E176D6220000F5249 /* redis-objc.framework in Frameworks */,
+				5B4AF8A0176D853E000F5249 /* redis-objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 		5B83A3B0176D30DA00D577DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B4AF89D176D6220000F5249 /* redis-objc.framework */,
+				5B4AF89F176D853E000F5249 /* redis-objc.framework */,
 				5B83A3B1176D30DA00D577DC /* Cocoa.framework */,
 				5B83A3B3176D30DA00D577DC /* Other Frameworks */,
 			);
