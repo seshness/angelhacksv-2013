@@ -334,6 +334,7 @@
 					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o8\"",
 					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o9\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +398,7 @@
 					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o8\"",
 					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o9\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
