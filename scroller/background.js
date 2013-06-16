@@ -2,8 +2,9 @@ chrome.browserAction.onClicked.addListener(automaticScroller);
 
 var kScalarScrollAmount = window.screen.height * 0.2,
     kTopFraction = 0.4,
-    kBottomFraction = 0.4,
-    kSmoothingAlpha = 0.8;
+    kBottomFraction = 0.3,
+    kSmoothingAlpha = 0.4,
+    kLastNValues = 70;
 
 var LastNThings = function(N) {
   this._stuff = [];
@@ -91,7 +92,7 @@ var ScrollingEngine = function(
   return this;
 };
 
-var recentEyeLocations = new LastNThings(100),
+var recentEyeLocations = new LastNThings(kLastNValues),
     engine = new ScrollingEngine(recentEyeLocations, kSmoothingAlpha, kTopFraction, kBottomFraction);
 
 function onMessage(evt) {
@@ -104,7 +105,7 @@ function onMessage(evt) {
 pubsub.subscribe('smoothPosition', function(smoothPosition) {
   chrome.tabs.getSelected(null, function(tab) {
     chrome.tabs.sendMessage(tab.id, {smoothPosition: smoothPosition});
-    console.log('message sent:', smoothPosition)
+    console.log('message sent:', smoothPosition);
   });
 });
 
