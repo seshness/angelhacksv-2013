@@ -15,7 +15,7 @@
 @synthesize redis=_redis;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+{                                                                                                                                                                                                                               
     _redis = [APGRedisServer connectTo:@"localhost" onPort:REDIS_DEFAULT_PORT];
     if (_redis.connected) {
         NSLog(@"Connected.");
@@ -36,7 +36,7 @@
 }
 
 -(void)gazePointBroadcasted:(NSNotification*)note{
-    NSDictionary* userInfo = [note userInfo];
+    NSDictionary* userInfo = [note userInfo];                                   
     NSPoint point;
     point.x = [(NSNumber*)[userInfo objectForKey:kGazePointXKey] floatValue];
     point.y = [(NSNumber*)[userInfo objectForKey:kGazePointYKey] floatValue];

@@ -140,7 +140,7 @@ void HeadTracker::updatetracker(void) throw(TrackingException) {
     double xx1 = mean(currentpoints, &HomPoint::x);
     double yy1 = mean(currentpoints, &HomPoint::y);
     
-    if (origpoints.size() == 0) {
+    if (origpoints.size() == 0 || origpoints.size() != currentpoints.size()) {
         throw TrackingException();
     }
 
