@@ -43,9 +43,9 @@
 
     NSString* command = @"PUBLISH";
     NSString* key = @"location";
-    NSString* value = [NSString stringWithFormat:@"{x:%f,y:%f}",point.x,point.y];
+    NSString* value = [NSString stringWithFormat:@"{'x':%f,'y':%f}",point.x,point.y];
     
-    NSLog(@"%@", command);
+    NSLog(@"%@", value);
     redisReply* reply = [_redis execute:command withKey:key value:value];
 }
 
