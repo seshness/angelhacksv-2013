@@ -16,7 +16,8 @@ function scrollToAPosition(x, y) {
     document.body.style.backgroundColor="red";
     console.log("received x to be " + x + " and y to be " + y);
     // var run = "window.scrollTo(" + String(x) + "," + String(y) + ")";
-    var run = "window.scrollTo(" + String(currentX - 100) + "," + String(currentY - 100) + ")";
+    var run = "window.scrollTo(" + String(currentX - 100) + "," +
+        String(currentY - 100) + ")";
     currentX = currentX - 100
     currentY = currentY - 100
     console.log(run);
@@ -25,16 +26,25 @@ function scrollToAPosition(x, y) {
     });
 };
 
+function showCurrentLocation(x, y) {
+  var run = " var obj = {left :" + x + ", top: " + y + "};
+       $('#dot').show(2000).offset(obj);";
+  chrome.tabs.executeScript(
+      code: run
+    });
+};
+
 function onMessage(evt) {
-    console.log('received message ' + evt.data)
-    var obj = JSON.parse(evt.data)
-    var x = obj.x
-    var y = obj.y
-    console.log('received obj ' + obj)
-    console.log('received message x ' + x)
-    console.log('received message y ' + y)
-    scrollToAPosition(100, 100)
-  }
+  console.log('received message ' + evt.data);
+  var obj = JSON.parse(evt.data);
+  var x = obj.x;
+  var y = obj.y;
+  console.log('received obj ' + obj);
+  console.log('received message x ' + x);
+  console.log('received message y ' + y);
+  showCurrentLocation (100, 100);
+  scrollToAPosition(100, 100);
+}
 
 websocket = new WebSocket("ws://localhost:8081");
 websocket.onmessage = function(evt) { onMessage(evt); };

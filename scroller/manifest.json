@@ -11,5 +11,9 @@
   "browser_action": {
     "default_title": "Scroll page to track user eyes"
   },
+  "web_accessible_resources" : [
+     "red_dot.html".
+     "red_dot.css"
+     ],
   "manifest_version": 2
 }
