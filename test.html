@@ -8,6 +8,7 @@
     con = document.getElementById("console");
     con.innerHTML += evt.data;
     con.innerHTML += '<br />';
+    console.log(JSON.parse(evt.data));
     }
     websocket = new WebSocket("ws://localhost:8081");
     websocket.onmessage = function(evt) { onMessage(evt); };
