@@ -1,14 +1,21 @@
-// Copyright (c) 2011 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 // Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(turnRed);
+chrome.browserAction.onClicked.addListener(automaticScroller);
 
-function turnRed(tab) {
-  console.log('Turning ' + tab.url + ' red!');
-  chrome.tabs.executeScript({
-    // code: 'document.body.style.backgroundColor="read"'
-    code: 'window.scrollTo(0, 0)'
-  });
+function automaticScroller(tab) {
+    console.log('Scrolling ' + tab.url + '!');
+    chrome.tabs.executeScript({
+        // code: 'document.body.style.backgroundColor="read"'
+        code: 'window.scrollTo(0, 0)'
+    });
 }
+
+
+// function onMessage(evt) {
+//     console.log('received message ' + evt.data)
+//     con = document.getElementById("console");
+//     con.innerHTML += evt.data;
+//     con.innerHTML += '<br />';
+//   }
+
+// websocket = new WebSocket("ws://localhost:8081");
+// websocket.onmessage = function(evt) { onMessage(evt); };
