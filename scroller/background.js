@@ -112,5 +112,10 @@ pubsub.subscribe('smoothPosition', function(smoothPosition) {
   });
 });
 
-websocket = new WebSocket("ws://localhost:8081");
-websocket.onmessage = function(evt) { onMessage(evt); };
+var startWebSocket = function() {
+  websocket = new WebSocket("ws://localhost:8081");
+  websocket.onmessage = onMessage;
+  websocket.onerror = websocket.onclose = startWebSocket;
+};
+
+startWebSocket();
