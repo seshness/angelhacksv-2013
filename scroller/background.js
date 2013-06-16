@@ -27,6 +27,12 @@ function scrollToAPosition(x, y) {
 
 function onMessage(evt) {
     console.log('received message ' + evt.data)
+    var obj = JSON.parse(evt.data)
+    var x = obj.x
+    var y = obj.y
+    console.log('received obj ' + obj)
+    console.log('received message x ' + x)
+    console.log('received message y ' + y)
     scrollToAPosition(100, 100)
   }
 
