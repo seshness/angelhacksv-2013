@@ -4,8 +4,8 @@ chrome.browserAction.onClicked.addListener(automaticScroller);
 function automaticScroller(tab) {
     console.log('Scrolling ' + tab.url + '!');
     chrome.tabs.executeScript({
-        // code: 'document.body.style.backgroundColor="read"'
-        code: 'window.scrollTo(0, 0)'
+        code: 'document.body.style.backgroundColor="green"'
+        // code: 'window.scrollTo(0, 0)'
     });
 }
 
