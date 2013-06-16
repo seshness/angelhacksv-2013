@@ -17,17 +17,16 @@ function scrollToAPosition(x, y) {
     console.log(run);
     chrome.tabs.executeScript({
 	    code: run
-	});                                                                                                                                      
+	});
 };
 
 function automaticScroller(tab) {
     console.log('Turning ' + tab.url + ' red!');
-    chrome.tabs.executeScript({                                                                                                                                             
-    // code: 'document.body.style.backgroundColor="read"'                                                                                                                   
-            code: 'window.scrollTo(200, 200)'                                                                                                                                 
-	    //  code: 'this.scrollToAPosition(0,0)'                                                                                                                                   
-      });                                                                                                                                                                   
-    
+    chrome.tabs.executeScript({
+    // code: 'document.body.style.backgroundColor="read"'
+            code: 'window.scrollTo(200, 200)'
+	    //  code: 'this.scrollToAPosition(0,0)'
+      });
     //for (var k = 0; k < 500; k= k+100){
     //scrollToAPosition(k, 0);
     //}
