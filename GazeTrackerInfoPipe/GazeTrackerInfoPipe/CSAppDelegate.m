@@ -23,17 +23,20 @@
         NSLog(@"Not connected: %@", [_redis lastError]);
     }
 
-    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:kGazeTrackerCalibrationRequestStart
-                                                                   object:kGazeSenderID
-                                                                 userInfo:nil
-                                                       deliverImmediately:YES];
-
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(gazePointBroadcasted:)
                                                             name:kGazePointNotification
                                                           object:kGazeSenderID];
 
 }
+
+- (IBAction)recalibrate:(id)sender {
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:kGazeTrackerCalibrationRequestStart
+                                                                   object:kGazeSenderID
+                                                                 userInfo:nil
+                                                       deliverImmediately:YES];
+}
+
 
 -(void)gazePointBroadcasted:(NSNotification*)note{
     NSDictionary* userInfo = [note userInfo];                                   
@@ -46,7 +49,7 @@
     NSString* value = [NSString stringWithFormat:@"{\"x\":%f,\"y\":%f}",point.x,point.y];
     
     NSLog(@"%@", value);
-    redisReply* reply = [_redis execute:command withKey:key value:value];
+    [_redis execute:command withKey:key value:value];
 }
 
 @end

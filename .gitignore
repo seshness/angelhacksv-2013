@@ -20,7 +20,7 @@ DerivedData
 .AppleDouble
 .LSOverride
 Icon
-
+.app/
 
 # Thumbnails
 ._*
@@ -44,3 +44,6 @@ tramp
 *.un~
 Session.vim
 .netrwhist
+
+GazeTrackerInfoPipe.app/
+GazerCocoa.app/

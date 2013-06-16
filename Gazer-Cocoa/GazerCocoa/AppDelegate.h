@@ -23,7 +23,7 @@
     NSString* _gazeTrackerStatus;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, assign) IBOutlet NSWindow *window;
 
 @property BOOL gazeTrackingRunning;
 

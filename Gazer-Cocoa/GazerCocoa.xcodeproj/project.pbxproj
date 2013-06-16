@@ -906,6 +906,7 @@
 		7212EA5D147C50C700CB2A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${SRCROOT}/dylibs\"",
@@ -948,6 +949,7 @@
 		7212EA5E147C50C700CB2A8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${SRCROOT}/dylibs\"",
@@ -1017,6 +1019,7 @@
 		AE0369941491824F0098174A /* Debug OpenCV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${SRCROOT}/dylibs\"",
@@ -1090,6 +1093,7 @@
 		AE21EF4C14913A5000D9AEF5 /* Debug GUI */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${SRCROOT}/dylibs\"",

@@ -14,6 +14,6 @@
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(GlobalManager);
 
-@synthesize calibrationFlag;
+@synthesize calibrationFlag=_calibrationFlag;
 
 @end

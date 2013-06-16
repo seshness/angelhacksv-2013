@@ -11,6 +11,8 @@
 
 @interface CSAppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)recalibrate:(id)sender;
+
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic) APGRedisServer *redis;
 
