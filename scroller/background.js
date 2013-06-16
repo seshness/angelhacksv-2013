@@ -1,9 +1,9 @@
 chrome.browserAction.onClicked.addListener(automaticScroller);
 
 var kScalarScrollAmount = window.screen.height * 0.2,
-    kTopFraction = 0.45,
+    kTopFraction = 0.4,
     kBottomFraction = 0.4,
-    kSmoothingAlpha = 0.9;
+    kSmoothingAlpha = 0.8;
 
 var LastNThings = function(N) {
   this._stuff = [];
