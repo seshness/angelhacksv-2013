@@ -67,7 +67,8 @@ var ScrollingEngine = function(
     });
 
     // It's reversed?!?!?!?!
-    smoothPosition = window.screen.height - smoothPosition;
+    // // maybe not
+    // smoothPosition = window.screen.height - smoothPosition;
 
     console.log('Smooth position', smoothPosition);
     pubsub.publish('smoothPosition', [smoothPosition]);
