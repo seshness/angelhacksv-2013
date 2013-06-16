@@ -3,7 +3,8 @@ $('#eyeTrackingDot').css({
     'border-radius': '20px',
     width: '30px',
     height: '30px',
-    'background-color': 'red'
+    'background-color': 'red',
+    'box-shadow': '0 0 15px 10px #ccc'
   });
 
 chrome.runtime.onMessage.addListener(
