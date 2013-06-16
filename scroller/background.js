@@ -1,13 +1,16 @@
 chrome.browserAction.onClicked.addListener(automaticScroller);
 
-var kScalarScrollAmount = window.screen.height * 0.2;
+var kScalarScrollAmount = window.screen.height * 0.2,
+    kTopFraction = 0.45,
+    kBottomFraction = 0.4,
+    kSmoothingAlpha = 0.9;
 
 var LastNThings = function(N) {
   this._stuff = [];
   this.eventHandlers = [];
   this.addThing = function(thing) {
     if (this._stuff.length > N) {
-      this._stuff.pop();
+      this._stuff.shift();
     }
     this._stuff.push(thing);
     this.eventHandlers.map(function(eH) {
@@ -41,8 +44,7 @@ function scrollByTheAmount(x, y) {
 }
 
 function showCurrentLocation(x, y) {
-  var run = "var obj = {left :" + x + ", top: " + y + "};" +
-          "$('#dot').show(2000).offset(obj);";
+  var run = "var obj = {left :" + x + ", top: " + y + "};";
   chrome.tabs.executeScript({
     code: run
   });
@@ -63,12 +65,15 @@ var ScrollingEngine = function(
       return (1 - smoothingAlpha) * memo + smoothingAlpha * next;
     });
 
+    console.log('Smooth position', smoothPosition);
+    pubsub.publish('smoothPosition', [smoothPosition]);
+
     /**
      * Top and bottom fractions of the screen trigger scrolling.
      */
     if (smoothPosition > (1 - bottomFraction) * window.screen.height) {
       return 1;
-    } else if (smoothPosition > topFraction * window.screen.height) {
+    } else if (smoothPosition < topFraction * window.screen.height) {
       return -1;
     } else {
       return 0;
@@ -87,7 +92,7 @@ var ScrollingEngine = function(
 };
 
 var recentEyeLocations = new LastNThings(20),
-    engine = new ScrollingEngine(recentEyeLocations, 0.8, 0.2, 0.2);
+    engine = new ScrollingEngine(recentEyeLocations, kSmoothingAlpha, kTopFraction, kBottomFraction);
 
 function onMessage(evt) {
   var obj = JSON.parse(evt.data);
@@ -95,6 +100,13 @@ function onMessage(evt) {
 
   recentEyeLocations.addThing(obj);
 }
+
+pubsub.subscribe('smoothPosition', function(smoothPosition) {
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendMessage(tab.id, {smoothPosition: smoothPosition});
+    console.log('message sent:', smoothPosition)
+  });
+});
 
 websocket = new WebSocket("ws://localhost:8081");
 websocket.onmessage = function(evt) { onMessage(evt); };
