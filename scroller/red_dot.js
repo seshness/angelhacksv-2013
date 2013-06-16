@@ -3,7 +3,7 @@ $('#eyeTrackingDot').css({
     'border-radius': '40px',
     width: '50px',
     height: '50px',
-    'background-color': 'red',
+    'background-color': 'rgba(250, 10, 20, 0.6)',
     'box-shadow': '0 0 15px 10px #ccc'
   });
 
