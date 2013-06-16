@@ -8,6 +8,7 @@
 
 #import "CSAppDelegate.h"
 #import "LCGazeFoundation.h"
+#import <redis-objc/hiredis.h>
 
 @implementation CSAppDelegate
 
@@ -15,8 +16,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    _redis = [ObjCHiredis redis:@"localhost" on:[NSNumber numberWithInt:6379]];
-    
+    _redis = [APGRedisServer connectTo:@"localhost" onPort:REDIS_DEFAULT_PORT];
+    if (_redis.connected) {
+        NSLog(@"Connected.");
+    } else {
+        NSLog(@"Not connected: %@", [_redis lastError]);
+    }
+
     [[NSDistributedNotificationCenter defaultCenter] postNotificationName:kGazeTrackerCalibrationRequestStart
                                                                    object:kGazeSenderID
                                                                  userInfo:nil
@@ -26,6 +32,7 @@
                                                         selector:@selector(gazePointBroadcasted:)
                                                             name:kGazePointNotification
                                                           object:kGazeSenderID];
+
 }
 
 -(void)gazePointBroadcasted:(NSNotification*)note{
@@ -33,9 +40,13 @@
     NSPoint point;
     point.x = [(NSNumber*)[userInfo objectForKey:kGazePointXKey] floatValue];
     point.y = [(NSNumber*)[userInfo objectForKey:kGazePointYKey] floatValue];
+
+    NSString* command = @"PUBLISH";
+    NSString* key = @"location";
+    NSString* value = [NSString stringWithFormat:@"{x:%f,y:%f}",point.x,point.y];
     
-    NSLog(@"%f, %f", point.x, point.y);
-    [_redis command:[NSString stringWithFormat:@"PUBLISH location \"%f, %f\"", point.x, point.y]];
+    NSLog(@"%@", command);
+    redisReply* reply = [_redis execute:command withKey:key value:value];
 }
 
 @end

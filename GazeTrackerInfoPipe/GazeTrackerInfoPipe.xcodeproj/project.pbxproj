@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4AF896176D54D5000F5249 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A3C4176D30DA00D577DC /* CSAppDelegate.m */; };
+		5B4AF89E176D6220000F5249 /* redis-objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4AF89D176D6220000F5249 /* redis-objc.framework */; };
 		5B83A3B2176D30DA00D577DC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B83A3B1176D30DA00D577DC /* Cocoa.framework */; };
 		5B83A3BC176D30DA00D577DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B83A3BA176D30DA00D577DC /* InfoPlist.strings */; };
 		5B83A3BE176D30DA00D577DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A3BD176D30DA00D577DC /* main.m */; };
 		5B83A3C2176D30DA00D577DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5B83A3C0176D30DA00D577DC /* Credits.rtf */; };
-		5B83A3C5176D30DA00D577DC /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A3C4176D30DA00D577DC /* CSAppDelegate.m */; };
 		5B83A3C8176D30DA00D577DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B83A3C6176D30DA00D577DC /* MainMenu.xib */; };
-		5B83A3DB176D45D400D577DC /* ObjCHiredis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B83A3DA176D45D400D577DC /* ObjCHiredis.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B4AF89D176D6220000F5249 /* redis-objc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "redis-objc.framework"; sourceTree = "<group>"; };
 		5B83A3AE176D30DA00D577DC /* GazeTrackerInfoPipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GazeTrackerInfoPipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B83A3B1176D30DA00D577DC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5B83A3B4176D30DA00D577DC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -34,7 +35,6 @@
 		5B83A3CF176D324C00D577DC /* LCCalibrationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalibrationPoint.h; sourceTree = "<group>"; };
 		5B83A3D0176D324C00D577DC /* LCGazeFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazeFoundation.h; sourceTree = "<group>"; };
 		5B83A3D1176D324C00D577DC /* LCGazePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGazePoint.h; sourceTree = "<group>"; };
-		5B83A3DA176D45D400D577DC /* ObjCHiredis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjCHiredis.framework; path = ../../../../../Library/Frameworks/ObjCHiredis.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B83A3DB176D45D400D577DC /* ObjCHiredis.framework in Frameworks */,
 				5B83A3B2176D30DA00D577DC /* Cocoa.framework in Frameworks */,
+				5B4AF89E176D6220000F5249 /* redis-objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,6 @@
 		5B83A3A5176D30DA00D577DC = {
 			isa = PBXGroup;
 			children = (
-				5B83A3DA176D45D400D577DC /* ObjCHiredis.framework */,
 				5B83A3B7176D30DA00D577DC /* GazeTrackerInfoPipe */,
 				5B83A3B0176D30DA00D577DC /* Frameworks */,
 				5B83A3AF176D30DA00D577DC /* Products */,
@@ -71,6 +70,7 @@
 		5B83A3B0176D30DA00D577DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B4AF89D176D6220000F5249 /* redis-objc.framework */,
 				5B83A3B1176D30DA00D577DC /* Cocoa.framework */,
 				5B83A3B3176D30DA00D577DC /* Other Frameworks */,
 			);
@@ -150,6 +150,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 5B83A3A5176D30DA00D577DC;
 			productRefGroup = 5B83A3AF176D30DA00D577DC /* Products */;
@@ -179,8 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4AF896176D54D5000F5249 /* CSAppDelegate.m in Sources */,
 				5B83A3BE176D30DA00D577DC /* main.m in Sources */,
-				5B83A3C5176D30DA00D577DC /* CSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +242,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -268,6 +270,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -281,10 +284,56 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Downloads/ObjCRedis_0o2o3_x86_64\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ObjCHiredis-gfvvlsjjnivvizaznqhurfgexguc/Build/Products/Release\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o1o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o9\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/redis-objc-bnredztboczdlucpacdahbmctxxp/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GazeTrackerInfoPipe/GazeTrackerInfoPipe-Prefix.pch";
 				INFOPLIST_FILE = "GazeTrackerInfoPipe/GazeTrackerInfoPipe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o9\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o9\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,10 +347,56 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Downloads/ObjCRedis_0o2o3_x86_64\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ObjCHiredis-gfvvlsjjnivvizaznqhurfgexguc/Build/Products/Release\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o1o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_OSX_1o3o9\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/redis-objc-bnredztboczdlucpacdahbmctxxp/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GazeTrackerInfoPipe/GazeTrackerInfoPipe-Prefix.pch";
 				INFOPLIST_FILE = "GazeTrackerInfoPipe/GazeTrackerInfoPipe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_iOS_1o3o9\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o0o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o1\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o2o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o0\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o2\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o3\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o4\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o5\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o6\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o7\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o8\"",
+					"\"$(SRCROOT)/ObjCHiredis/ObjCHiredis/RELEASES/ObjCHiredis_Simulator_1o3o9\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -326,6 +421,7 @@
 				5B83A3CD176D30DA00D577DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -21,10 +21,10 @@
 @synthesize gazeTrackerStatus = _gazeTrackerStatus;
 
 -(void)applicationWillFinishLaunching:(NSNotification*)aNotification{
-    self.gazeTrackingRunning = NO; // Gaze tracking is not active
+    self.gazeTrackingRunning = YES; // Gaze tracking is not active
     self.gazeTrackerStatus = kGazeTrackerUncalibrated;
     // Whether we should launch the GUI on start
-    self.runHeadless = NO; // No, run in background
+    self.runHeadless = YES; // No, run in background
     
     #ifdef CONFIGURATION_Debug_GUI
     NSLog(@"Launching with GUI");

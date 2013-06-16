@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <ObjCHiredis/ObjCHiredis.h>
+#import <redis-objc/redis-objc.h>
 
 @interface CSAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (nonatomic) ObjCHiredis *redis;
+@property (nonatomic) APGRedisServer *redis;
 
 @end
