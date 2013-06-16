@@ -1,5 +1,6 @@
 // Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(automaticScroller);
+// chrome.browserAction.onClicked.addListener(automaticScroller);
+chrome.browserAction.onClicked.addListener(onMessage);
 
 function automaticScroller(tab) {
     console.log('Scrolling ' + tab.url + '!');
@@ -10,12 +11,9 @@ function automaticScroller(tab) {
 }
 
 
-// function onMessage(evt) {
-//     console.log('received message ' + evt.data)
-//     con = document.getElementById("console");
-//     con.innerHTML += evt.data;
-//     con.innerHTML += '<br />';
-//   }
+function onMessage(evt) {
+    console.log('received message ' + evt.data)
+  }
 
-// websocket = new WebSocket("ws://localhost:8081");
-// websocket.onmessage = function(evt) { onMessage(evt); };
+websocket = new WebSocket("ws://localhost:8081");
+websocket.onmessage = function(evt) { onMessage(evt); };
