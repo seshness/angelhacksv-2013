@@ -125,7 +125,7 @@ HeadTracker::predictpoints(double xx0, double yy0, double xx1, double yy1,
     }
 }
 
-void HeadTracker::updatetracker(void) {
+void HeadTracker::updatetracker(void) throw(TrackingException) {
     depths.resize(tracker.pointcount());
     detectinliers(tracker.getpoints(&PointTracker::origpoints, true), 
 		  tracker.getpoints(&PointTracker::currentpoints, true));
@@ -139,6 +139,10 @@ void HeadTracker::updatetracker(void) {
     double yy0 = mean(origpoints, &HomPoint::y);
     double xx1 = mean(currentpoints, &HomPoint::x);
     double yy1 = mean(currentpoints, &HomPoint::y);
+    
+    if (origpoints.size() == 0) {
+        throw TrackingException();
+    }
 
     Vector fmatrix = computeAffineFMatrix(origpoints, currentpoints);
     

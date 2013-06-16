@@ -23,7 +23,7 @@ class HeadTracker {
     double rotx, roty, atx, aty;
 
     void draw(IplImage *image);
-    void updatetracker(void);
+    void updatetracker(void) throw (TrackingException);
 
     HeadTracker(PointTracker &tracker) : tracker(tracker) {}
 };

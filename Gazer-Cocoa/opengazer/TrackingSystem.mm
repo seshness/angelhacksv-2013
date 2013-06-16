@@ -45,7 +45,7 @@ void TrackingSystem::doprocessing(const IplImage *frame,
 	throw TrackingException();
     }
 
-    headtracker.updatetracker();
+    headtracker.updatetracker(); // throws Tracking Exception
     eyex.extractEye(frame);	// throws Tracking Exception
     gazetracker.update(eyex.eyefloat.get());
 
