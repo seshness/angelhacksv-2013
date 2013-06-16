@@ -1,8 +1,5 @@
 chrome.browserAction.onClicked.addListener(automaticScroller);
 
-var currentX = 200
-var currentY = 200
-
 function automaticScroller(tab) {
     console.log('Scrolling ' + tab.url + '!');
     chrome.tabs.executeScript({
@@ -16,10 +13,8 @@ function scrollToAPosition(x, y) {
     document.body.style.backgroundColor="red";
     console.log("received x to be " + x + " and y to be " + y);
     // var run = "window.scrollTo(" + String(x) + "," + String(y) + ")";
-    var run = "window.scrollTo(" + String(currentX - 100) + "," +
-        String(currentY - 100) + ")";
-    currentX = currentX - 100
-    currentY = currentY - 100
+    var run = "window.scrollTo(" + String(window.scrollX - 100) + "," +
+        String(window.scrollY - 100) + ")";
     console.log(run);
     chrome.tabs.executeScript({
         code: run
@@ -27,11 +22,11 @@ function scrollToAPosition(x, y) {
 };
 
 function showCurrentLocation(x, y) {
-  var run = " var obj = {left :" + x + ", top: " + y + "};
-       $('#dot').show(2000).offset(obj);";
-  chrome.tabs.executeScript(
-      code: run
-    });
+  var run = "var obj = {left :" + x + ", top: " + y + "};" +
+          "$('#dot').show(2000).offset(obj);";
+  chrome.tabs.executeScript({
+    code: run
+  });
 };
 
 function onMessage(evt) {
