@@ -2,7 +2,7 @@
   "name": "Automatic Scroller",
   "version": "2.0",
   "permissions": [
-    "activeTab"
+    "activeTab", "tabs", "http://*/*", "https://*/*"
   ],
   "background": {
     "scripts": ["background.js"],
